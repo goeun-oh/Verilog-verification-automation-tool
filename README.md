@@ -39,7 +39,7 @@ Python을 활용하여 입력값을 생성하고, 시뮬레이션 결과를 자�
 - **🔍 오고은**: Python 기반 결과 검증 및 오류 감지, 프로젝트 총괄 (`verify_results.py`, `error_log.txt`)
 
 ### **🔹 4️⃣ 테스트 자동화 및 프로젝트 최적화**
-- **🚀 유진모**:  테스트 자동화 및 프로젝트 최적화 ('run_tests.py', '.github/workflows/test.yml')
+- **🚀 유진모**:  테스트 자동화 및 프로젝트 최적화 (`run_tests.py`, `.github/workflows/test.yml`)
 
 ## 📌 프로젝트 변경 기록
 🔹 최신 변경 사항은 아래에서 확인하세요!  
