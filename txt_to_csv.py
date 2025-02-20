@@ -1,5 +1,6 @@
 import csv
-import datetime
+import datetime, timezone
+from zoneinfo import ZoneInfo
 
 # 파일 경로
 python_file = "python_output.txt"
@@ -31,7 +32,9 @@ with open(output_csv, "w", newline="") as csvfile:
     csv_writer.writerow(["a", "b", "cin", "추출시간", "Python_sum", "Python_cout", "Verilog_sum", "Verilog_cout", "일치여부"])
 
     # 데이터 비교 및 기록
-    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    now_utc = datetime.now(timezone.utc)
+    now_kst = now_utc.astimezone(ZoneInfo("Asia/Seoul"))
+    now = now_kst.strftime("%Y-%m-%d %H:%M:%S")
     for (a, b, cin, py_sum, py_cout), (a, b, cin, verilog_sum, verilog_cout) in zip(python_results, verilog_results):
         match = "O" if (py_sum == verilog_sum and py_cout == verilog_cout) else "X"
         csv_writer.writerow([a, b, cin, now, py_sum, py_cout, verilog_sum, verilog_cout, match])
