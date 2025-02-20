@@ -21,21 +21,23 @@
     
 ### ✅ 2. testbench 실행 (adder_tb.v)
 📌 **기능 상세**
-
-  - Pyverilog 사용
-  
-  - Pyverilog 기능
-    1. code parser
-    2. dataflow analyzer
-    3. control-flow analyzer
-    4. code generator
     
-  - Pyverilog의 기능 중 VerilogDataflowAnalyzer로 code generator 기능을 사용
-    1. 실행 결과를 verilog_output.txt로 저장
-    2. verilog_output.txt와 실제 verilog 결과 값과 비교로 검증
+  - file = $fopen(input_file, "r")로 입력 txt 파일 read 후, 변수에 할당
+    1. if (file == 0) 이면 Error 메세지 출력 후 종료
+    2. file이 존재한다면 다음 로직
+   
+  - $fscanf(file, "%d %d %d\n", a, b, cin)로 파일 한 줄씩 읽고 테스트 실행
+    1. 각 연산당 1ns 실행
+    2. 테스트 후, $display로 값 출력
 
-  - analyzer = VerilogDataflowAnalyzer(verilog_file, noreorder=True, topmodule='adder')
-analyzer.generate()
-    1. topmodule='adder'를 지정하여 "adder"라는 이름의 최상위 모듈을 분석 대상으로 설정
-    2. analyzer.generate()를 호출하여 데이터 흐름 분석을 수행
-    3. noreorder=True 일반적으로 최적화를 위해 내부적으로 연산 순서를 변경하지 않고 순서를 그대로 유지한 채로 분석
+    
+  - $fclose(file)로 파일 닫기
+
+
+### ✅ 3. 결과 출력 및 파형
+![image](https://github.com/user-attachments/assets/84aff1b9-7caa-41a3-9b9a-cc85e9b62587)
+입력(a,b,cin)과 출력(sum,cout) 값에 따른 출력 결과
+
+
+![image](https://github.com/user-attachments/assets/e523e145-1cfa-4962-9958-1eff2b88a430)
+입력 a=1, b=0, cin=0 / 출력 cout=0, sum=1의 파형
