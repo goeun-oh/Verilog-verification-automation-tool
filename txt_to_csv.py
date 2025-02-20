@@ -1,5 +1,6 @@
 import csv
-import datetime, timezone
+import datetime
+from datetime import timezone
 from zoneinfo import ZoneInfo
 
 # 파일 경로
