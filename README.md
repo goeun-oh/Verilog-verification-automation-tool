@@ -32,18 +32,17 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 
 
 # 📂 파일 구조 (feature/result_verification)
-📦 Verilog-verification-automation-tool
+📦 Verilog-verification-automation-tool <br>
  ┣ 📜 `README.md`                 # 전체 프로젝트 설명 파일
 
 
-## 🔹 Verilog 코드
+🔹 Verilog 코드
  ┣ 📜 `adder.v`                   # Verilog Full Adder 코드 <br>
  ┣ 📜 `adder_tb.v`                # Verilog Testbench
 
-
-## 🔹 입력 데이터 생성 
- ┣ 📜 generate_input.py         # random input을 생성하여 input.txt 에 저장
- ┣ 📜 input.txt                 # Full Adder 테스트 입력값
+🔹 입력 데이터 생성 
+ ┣ 📜 `generate_input.py`         # random input을 생성하여 input.txt 에 저장
+ ┣ 📜 `input.txt`                 # Full Adder 테스트 입력값
 
 
 ## 🔹 Python 연산 및 결과 저장
