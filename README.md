@@ -25,7 +25,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 - **💻 유승우**: Python 기반 입력 생성 (`generate_input.py`, `run_verilog.py`)
 
 ### **🔹 3️⃣ 결과 검증 & 오류 감지**
-- **🔍 오고은**: Python 기반 결과 검증 및 오류 감지, 프로젝트 총괄 (`verify_results.py`, `error_log.txt`)
+- **🔍 오고은**: Python 기반 결과 도출 및 Verilog Output과 비교, **프로젝트 총괄** (`run_python_adder.py`, `compare_files.py`)
 
 ### **🔹 4️⃣ 테스트 자동화 및 프로젝트 최적화**
 - **🚀 유진모**:  테스트 자동화 및 프로젝트 최적화 (`run_tests.py`, `.github/workflows/test.yml`)
