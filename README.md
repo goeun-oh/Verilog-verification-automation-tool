@@ -36,8 +36,8 @@
 
 ### ✅ 3. 결과 출력 및 파형
 ![image](https://github.com/user-attachments/assets/84aff1b9-7caa-41a3-9b9a-cc85e9b62587)
-입력(a,b,cin)과 출력(sum,cout) 값에 따른 출력 결과
++ 입력(a,b,cin)과 출력(sum,cout) 값에 따른 출력 결과
 
 
 ![image](https://github.com/user-attachments/assets/e523e145-1cfa-4962-9958-1eff2b88a430)
-입력 a=1, b=0, cin=0 / 출력 cout=0, sum=1의 파형
++ 입력 a=1, b=0, cin=0 / 출력 cout=0, sum=1의 파형
