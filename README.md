@@ -1,4 +1,4 @@
-# 📌 Verilog-verification-automation-tool
+# 📌 Random Input 생성
 ---
 ## 🚀 주요 기능
   - generate_input.py	: 랜덤 8비트 입력값(A, B, Cin) 생성 및 저장 (input.txt)
