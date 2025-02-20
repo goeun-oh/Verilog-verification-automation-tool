@@ -41,7 +41,7 @@ Verilog-verification-automation-tool/
 │── .github/                   # GitHub Actions (CI/CD)
 │── README.md                 # 프로젝트 소개 문서
 │── LICENSE                   # 라이선스 파일
-
+---
 
 ## 🏗️ 팀원 역할 분담
 | 이름 | 역할 | 주요 작업 |
