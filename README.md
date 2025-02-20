@@ -40,7 +40,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 **[Python vs Verilog 결과 비교 (feature/result_verification branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/result_verification/README.md)**
 <br>
 
-### **🔹 4️⃣ 테스트 자동화 및 프로젝트 최적화**
+### **🔹 4️⃣ 검증 자동화 연구 & 기획**
 **🚀 유진모**:  
 - 프로젝트 기획 및 아이디어 구체화
 - 문서 구조 및 개발 방향성 제안
