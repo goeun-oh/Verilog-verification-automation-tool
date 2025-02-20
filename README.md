@@ -1,4 +1,4 @@
-### Verilog-verification-automation-tooㅣ
+### Verilog-verification-automation-tool
 ---
 1. 전체 구조 (파일 간 관계)
   - generate_input.py	: 랜덤 8비트 입력값(A, B) 생성 및 저장 (input.txt)
