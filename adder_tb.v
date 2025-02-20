@@ -7,7 +7,7 @@ module adder_tb;
     integer file, scan_result;
 
     // Full Adder 인스턴스 생성
-    Full_adder uut (
+    adder uut (
         .a(a), 
         .b(b), 
         .cin(cin), 
