@@ -15,6 +15,9 @@ jobs:
       with:
         token: ${{secrets.GITHUB_TOKEN}}
 
+    - name: 🛠 현재 디렉터리 및 파일 확인
+      run: pwd && ls -R
+      
     - name: Python & Verilog 환경 설정
       uses: actions/setup-python@v4
       with:
