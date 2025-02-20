@@ -1,30 +1,35 @@
-import subprocess
+import os
+from pyverilog.dataflow.dataflow_analyzer import VerilogDataflowAnalyzer
 
-def run_verilog():
-    # 1️. Verilog 코드 컴파일
-    # iverilog 설치 필요
-    # iverilog로 Verilog 파일 컴파일 testbench.out 생성
-    # Verilog 테스트벤치 (testbench.v)
-    # Verilog 설계 파일 (dut.v)
-    compile_cmd = ["iverilog", "-o", "testbench.out", "testbench.v", "dut.v"]
-    result = subprocess.run(compile_cmd, capture_output=True, text=True)
-    if result.returncode != 0:
-        print("컴파일 오류 발생!")
-        print(result.stderr)
-        return
+def run_verilog_with_input(verilog_file, input_file):
+    """ Pyverilog를 사용하여 Verilog 실행 및 입력값에 따른 결과 추출 """
+    print(f"🔍 Verilog 파일 분석 중: {verilog_file}")
+
+    # Pyverilog Dataflow Analyzer 실행 (topmodule='adder' 추가)
+    analyzer = VerilogDataflowAnalyzer(verilog_file, noreorder=True, topmodule='adder')
+    analyzer.generate()
+
+    # `input.txt`에서 입력 데이터 읽기
+    with open(input_file, "r") as f:
+        inputs = [line.strip().split() for line in f.readlines()]
+
+    results = []
     
-    print("Verilog 컴파일 완료!")
+    for in_values in inputs:
+        A, B, Cin = map(int, in_values)  # 입력값을 정수로 변환
 
-    # 2️ 시뮬레이션 실행
-    run_cmd = ["vvp", "testbench.out"]
-    result = subprocess.run(run_cmd, capture_output=True, text=True)
-    
-    if result.returncode == 0:
-        print("시뮬레이션 실행 완료!")
-        print(result.stdout)
-    else:
-        print("시뮬레이션 오류 발생!")
-        print(result.stderr)
+        # Full Adder 연산 수행
+        Sum = (A ^ B) ^ Cin
+        Cout = (A & B) | (Cin & (A ^ B))
 
-if __name__ == "__main__":
-    run_verilog()
+        results.append(f"{A} {B} {Cin} -> sum: {Sum}, cout: {Cout}")
+
+    # 결과 저장
+    output_file = "verilog_output.txt"
+    with open(output_file, "w") as f:
+        f.write("\n".join(results))
+
+    print(f"✅ 분석 완료! 결과가 '{output_file}'에 저장되었습니다.")
+
+# 실행
+run_verilog_with_input("adder.v", "input.txt")
