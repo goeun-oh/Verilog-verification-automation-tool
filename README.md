@@ -41,3 +41,11 @@ Verilog-verification-automation-tool/
 │── .github/                   # GitHub Actions (CI/CD)
 │── README.md                 # 프로젝트 소개 문서
 │── LICENSE                   # 라이선스 파일
+
+
+## 🏗️ 팀원 역할 분담
+| 이름 | 역할 | 주요 작업 |
+|------|-------------------------|----------------------|
+| **양지훈** | Verilog 설계 & 시뮬레이션 | `adder.v`, `adder_tb.v` |
+| **유승우** | Python 기반 입력 생성 | `generate_input.py`, `run_verilog.py` |
+| **오고은** | Python 기반 결과 검증 및 오류 감지 | verify_results.py, error_log.txt |
