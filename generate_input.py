@@ -13,5 +13,5 @@ def generate_input_data(NUM_TEST_CLASS):
             file.write(f"{A} {B} {Cin}\n")
     print(f"✅ {NUM_TEST_CLASS}개 입력 데이터 생성 완료! ({INPUT_FILE})")
 
-if __name__ == "__main__":
-    generate_input_data(NUM_TEST_CLASS)
+# if __name__ == "__main__":
+generate_input_data(NUM_TEST_CLASS)
