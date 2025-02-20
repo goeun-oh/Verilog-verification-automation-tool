@@ -1,5 +1,8 @@
+import os
 import csv
 import datetime
+from datetime import timezone
+from zoneinfo import ZoneInfo
 
 # 파일 경로
 python_file = "python_output.txt"
@@ -24,16 +27,22 @@ def read_results(filename):
 python_results = read_results(python_file)
 verilog_results = read_results(verilog_file)
 
-# CSV 파일 작성
-with open(output_csv, "w", newline="") as csvfile:
+# CSV 파일 작성 (추가 모드)
+file_exists = os.path.isfile(output_csv)
+
+with open(output_csv, "a", newline="") as csvfile:
     csv_writer = csv.writer(csvfile)
-    # 헤더 작성
-    csv_writer.writerow(["a", "b", "cin", "추출시간", "Python_sum", "Python_cout", "Verilog_sum", "Verilog_cout", "일치여부"])
+    
+    # 파일이 존재하지 않으면 헤더 작성
+    if not file_exists:
+        csv_writer.writerow(["a", "b", "cin", "추출시간", "Python_sum", "Python_cout", "Verilog_sum", "Verilog_cout", "일치여부"])
 
     # 데이터 비교 및 기록
-    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    now_utc = datetime.now(timezone.utc)
+    now_kst = now_utc.astimezone(ZoneInfo("Asia/Seoul"))
+    now = now_kst.strftime("%Y-%m-%d %H:%M:%S")
     for (a, b, cin, py_sum, py_cout), (a, b, cin, verilog_sum, verilog_cout) in zip(python_results, verilog_results):
         match = "O" if (py_sum == verilog_sum and py_cout == verilog_cout) else "X"
         csv_writer.writerow([a, b, cin, now, py_sum, py_cout, verilog_sum, verilog_cout, match])
 
-print(f"CSV 파일 생성 완료: {output_csv}")
+print(f"CSV 파일 업데이트 완료: {output_csv}")
