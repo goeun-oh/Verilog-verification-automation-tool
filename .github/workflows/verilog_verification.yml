@@ -28,6 +28,9 @@ jobs:
         sudo apt update
         pip install pyverilog
 
+    - name: input.txt generate
+      run: python generate_input.py
+
     - name: Full Adder Python 실행
       run: python run_python_adder.py
 
