@@ -1,1 +1,43 @@
-# Verilog-verification-automation-tool
+# 📌 Verilog Verification Automation Tool
+
+![GitHub repo size](https://img.shields.io/github/repo-size/goeun-oh/Verilog-verification-automation-tool)
+![GitHub last commit](https://img.shields.io/github/last-commit/goeun-oh/Verilog-verification-automation-tool)
+![GitHub contributors](https://img.shields.io/github/contributors/goeun-oh/Verilog-verification-automation-tool)
+
+## 📖 프로젝트 소개
+**Verilog Verification Automation Tool**은 Verilog로 설계된 8비트 가산기의 기능을 자동으로 검증하는 시스템입니다.  
+Python을 활용하여 입력값을 생성하고, 시뮬레이션 결과를 자동 비교 및 검증합니다.
+
+---
+
+## 🔧 주요 기능
+✅ **Verilog 자동 검증** - Python을 이용하여 Verilog 시뮬레이션을 자동화  
+✅ **랜덤 입력값 생성** - 다양한 입력 조합을 자동 생성  
+✅ **결과 비교 및 로그 저장** - 예측값과 시뮬레이션 결과를 비교하여 로그로 기록  
+✅ **유닛 테스트 지원** - 다양한 테스트 케이스를 설정하여 검증  
+
+---
+
+## 🛠️ 기술 스택
+- **HDL:** Verilog
+- **Simulation:** ModelSim, Icarus Verilog
+- **Programming:** Python
+- **Communication:** File I/O, subprocess
+- **Version Control:** Git & GitHub
+
+---
+
+## 📂 폴더 구조
+```bash
+Verilog-verification-automation-tool/
+│── verilog/                  # Verilog 코드
+│   ├── adder.v               # 8비트 가산기 설계
+│   ├── adder_tb.v            # 테스트벤치
+│── python/                   # Python 검증 코드
+│   ├── generate_input.py     # 랜덤 입력값 생성
+│   ├── run_verilog.py        # Verilog 실행 자동화
+│   ├── verify_results.py     # 결과 검증 및 비교
+│── docs/                     # 문서화
+│── .github/                   # GitHub Actions (CI/CD)
+│── README.md                 # 프로젝트 소개 문서
+│── LICENSE                   # 라이선스 파일
