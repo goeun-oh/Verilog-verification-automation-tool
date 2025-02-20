@@ -31,6 +31,14 @@ jobs:
     - name: input.txt generate
       run: python generate_input.py
 
+    - name: input.txt 파일 git에 추가(커밋 및 푸시)
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions@github.com"
+        git add input.txt # 날씨 데이터 저장 csv를 github에 추가
+        git commit -m "Update input.txt (auto)" # 변경 사항이 있을 경우 commit
+        git push # 변경 사항을 git에 push
+      
     - name: Full Adder Python 실행
       run: python run_python_adder.py
 
