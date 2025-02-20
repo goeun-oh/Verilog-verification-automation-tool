@@ -11,7 +11,7 @@ module adder_tb;
 
     initial begin
         fd_in = $fopen("input.txt", "r"); // 입력 파일 열기
-        fd_out = $fopen("output.txt", "w"); // 출력 파일 열기
+        fd_out = $fopen("verilog_output.txt", "w"); // 출력 파일 열기
 
         if (fd_in == 0) begin
             $display("Error: input.txt file not found.");
