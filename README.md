@@ -16,7 +16,7 @@
   - VerilogDataflowAnalyzer로 code generator 기능을 사용
   - 실행 결과를 verilog_output.txt로 저장
   - verilog_output.txt와 실제 verilog 결과 값과 비교로 검증
-=======
+---
 # Verilog-verification-automation-tool
 ## 📌 Develop Branch Guide
 
