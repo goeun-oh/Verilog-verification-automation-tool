@@ -57,7 +57,7 @@ jobs:
       run: vvp adder_sim  # 시뮬레이션 실행
 
     - name: Upload Simulation Output
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: simulation-output
         path: verilog_output.txt  # GitHub Actions에서 실행된 결과를 다운로드 가능하게 저장
