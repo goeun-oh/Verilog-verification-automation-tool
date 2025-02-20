@@ -83,7 +83,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
-        git add result.csv # 날씨 데이터 저장 csv를 github에 추가
+        git add comparison_output.csv # 날씨 데이터 저장 csv를 github에 추가
         git commit -m "Update result.csv (auto)" # 변경 사항이 있을 경우 commit
         git push # 변경 사항을 git에 push
 
