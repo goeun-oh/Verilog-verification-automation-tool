@@ -28,9 +28,9 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 ### **🔹 2️⃣ Python 입력 생성**
 **💻 유승우**: 
 - random input을 생성하여 `input.txt`에 기록하는 Python 프로그램 작성 (`generate_input.py`)
-- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`)
+- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
+**[Random Input 생성 (feature/python_input_gen branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/python_input_gen/README.md)**
 <br>
-**[Random Input 생성 (feature/python_input_gen branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/python_input_gen/README.md)** <br>
 
 ### **🔹 3️⃣ 결과 검증 & 오류 감지**
 **🔍 오고은**:
