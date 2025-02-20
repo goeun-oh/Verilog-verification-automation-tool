@@ -20,16 +20,19 @@
   - Pyverilog 사용
   
   - Pyverilog 기능
-    (1) code parser
-    (2) dataflow analyzer
-    (3) control-flow analyzer
-    (4) code generator
+    1. code parser
+    2. dataflow analyzer
+    3. control-flow analyzer
+    4. code generator
     
-  - VerilogDataflowAnalyzer로 code generator 기능을 사용
-    실행 결과를 verilog_output.txt로 저장
-    verilog_output.txt와 실제 verilog 결과 값과 비교로 검증
+  - Pyverilog의 기능 중 VerilogDataflowAnalyzer로 code generator 기능을 사용
+    1. 실행 결과를 verilog_output.txt로 저장
+    2. verilog_output.txt와 실제 verilog 결과 값과 비교로 검증
 
   - analyzer = VerilogDataflowAnalyzer(verilog_file, noreorder=True, topmodule='adder')
 analyzer.generate()
-    topmodule='adder'를 지정하여 "adder"라는 이름의 최상위 모듈을 분석 대상으로 설정
-    analyzer.generate()를 호출하여 데이터 흐름 분석을 수행
+    1. topmodule='adder'를 지정하여 "adder"라는 이름의 최상위 모듈을 분석 대상으로 설정
+    2. analyzer.generate()를 호출하여 데이터 흐름 분석을 수행
+    3. noreorder=True 일반적으로 최적화를 위해 내부적으로 연산 순서를 변경하지 않고 순서를 그대로 유지한 채로 분석
+
+
