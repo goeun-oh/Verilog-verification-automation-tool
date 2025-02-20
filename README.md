@@ -1,16 +1,35 @@
-### Verilog-verification-automation-tool
+# 📌 Verilog-verification-automation-tool
 ---
-1. 전체 구조 (파일 간 관계)
+## 🚀 주요 기능
   - generate_input.py	: 랜덤 8비트 입력값(A, B, Cin) 생성 및 저장 (input.txt)
   - run_verilog.py : Verilog 시뮬레이터 실행 자동화 (verilog & pyverilog)
 ---
-2. Python으로 입력 데이터 생성(generate_input.py)
+### ✅ 1. Python으로 입력 데이터 생성(generate_input.py)
+
+📌 **기능 상세**
+
+  - with open("대상파일", "w"(쓰기) or "r"(읽기)) as file
+    1. file을 open하고 close()안하는 것을 방지하기 위해 사용
+    2. open 구문 종료시 close()가 동작
+    3. random.randint(0,1)로 생성된 값 txt 파일에 저장하기 위해 사용
+    
+### ✅ 2. Python으로 Verilog 시뮬레이션 실행(run_verilog.py)
+
+📌 **기능 상세**
+
+  - Pyverilog 사용
+  
   - Pyverilog 기능
-  - (1) code parser
-  - (2) dataflow analyzer
-  - (3) control-flow analyzer
-  - (4) code generator
-  - 
+    (1) code parser
+    (2) dataflow analyzer
+    (3) control-flow analyzer
+    (4) code generator
+    
   - VerilogDataflowAnalyzer로 code generator 기능을 사용
-  - 실행 결과를 verilog_output.txt로 저장
-  - verilog_output.txt와 실제 verilog 결과 값과 비교로 검증
+    실행 결과를 verilog_output.txt로 저장
+    verilog_output.txt와 실제 verilog 결과 값과 비교로 검증
+
+  - analyzer = VerilogDataflowAnalyzer(verilog_file, noreorder=True, topmodule='adder')
+analyzer.generate()
+    topmodule='adder'를 지정하여 "adder"라는 이름의 최상위 모듈을 분석 대상으로 설정
+    analyzer.generate()를 호출하여 데이터 흐름 분석을 수행
