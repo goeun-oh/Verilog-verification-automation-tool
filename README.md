@@ -1,2 +1,2 @@
 # Verilog-verification-automation-tool
-ㅇㅇㅇ
+##1. 로직 구성
