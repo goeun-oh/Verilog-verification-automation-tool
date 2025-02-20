@@ -38,7 +38,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 <br>
 
 ### **🔹 4️⃣ 테스트 자동화 및 프로젝트 최적화**
-- **🚀 유진모**:  
+**🚀 유진모**:  
 <br>
 
 
@@ -63,6 +63,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 🔹 결과 비교 및 검증 <br>
  ┣ 📜 `compare_files.py`          # Python과 Verilog 결과 비교 스크립트 <br>
  ┣ 📜 `txt_to_csv.py`             # compare_files.py의 결과를 csv 형식으로 저장 
+<br>
 <br>
 
 # 📌 프로젝트 변경 기록
