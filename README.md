@@ -1,4 +1,4 @@
-# 📌 Verilog-verification-automation-tool
+# 📌 가산기 설계
 ---
 ## 🚀 주요 기능
   - adder.v: 1bit 덧셈 연산을 위한 gate 로직
