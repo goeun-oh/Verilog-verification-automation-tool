@@ -26,7 +26,7 @@ jobs:
     - name: 필요한 패키지 설치
       run: |
         sudo apt update
-        sudo apt install -y cpp
+        sudo apt install -y iverilog cpp
         pip install pyverilog
 
     - name: input.txt generate
