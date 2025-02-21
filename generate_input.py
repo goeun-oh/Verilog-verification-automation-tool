@@ -13,7 +13,7 @@ def translate_2bit(num):
 
 def generate_data():
     data = []
-    for _ in range(6):  # 6개의 데이터 라인 생성
+    while(1):  # 6개의 데이터 라인 생성
         a = random.randint(0, NUM_TEST_CLASS - 1)
         b = random.randint(0, NUM_TEST_CLASS - 1)
         a_2bit = translate_2bit(a)
