@@ -1,4 +1,4 @@
-module adder8_tb;
+module adder_tb;
     reg [7:0] a, b;
     reg cin;
   	wire [7:0] sum;
