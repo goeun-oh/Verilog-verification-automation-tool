@@ -1,4 +1,5 @@
 import random
+import os
 
 bit = 8
 NUM_TEST_CLASS = 2 ** bit
