@@ -22,20 +22,24 @@
   - with open(output_csv, "w", newline="") as csvfile: 수정
     1. 위의 방식으로 하면 csv 파일에 추가되는 방식이 아닌 덮어쓰는 방식으로 csv 파일이 생성 됨
     2. file_exists = os.path.isfile(output_csv)러 csv 파일 작성 혹은 존재 확인
+    3. 
        with open(output_csv, "a", newline="") as csvfile: w를 a로 바꿔 데이터가 추가되는 방식으로 바뀜
+
        if not file_exists:
-        csv_writer.writerow(["a", "b", "cin", "추출시간", "Python_sum", "Python_cout", "Verilog_sum", "Verilog_cout", "일치여부"])
+         csv_writer.writerow(["a", "b", "cin", "추출시간", "Python_sum", "Python_cout", "Verilog_sum", "Verilog_cout", "일치여부"])
        파일이 없으면 헤더 작성
 
   - utc kst 시간으로 변환
-    시간대 정보가 없는 객체에 대해 astimezone을 쓸 수 없으므로
-    현재 시간을 가져와서
-    from datetime import datetime, timezone
-    from zoneinfo import ZoneInfo
-    now_utc = datetime.now(timezone.utc)
     
-    zoneinfo 모듈을 가져와서 Asia/Seoul의 정보를 가져와 시간대 변환
-    now_kst = now_utc.astimezone(ZoneInfo("Asia/Seoul"))
-    now = now_kst.strftime("%Y-%m-%d %H:%M:%S")
+    1. 시간대 정보가 없는 객체에 대해 astimezone을 쓸 수 없으므로
+
+       현재 시간을 가져와서
+       from datetime import datetime, timezone
+       from zoneinfo import ZoneInfo
+       now_utc = datetime.now(timezone.utc)
+    
+    2. zoneinfo 모듈을 가져와서 Asia/Seoul의 정보를 가져와 시간대 변환
+       now_kst = now_utc.astimezone(ZoneInfo("Asia/Seoul"))
+       now = now_kst.strftime("%Y-%m-%d %H:%M:%S")
     
     
