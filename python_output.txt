@@ -1,8 +1,8 @@
-1 1 0 -> sum: 0, cout: 1
-1 1 0 -> sum: 0, cout: 1
 0 1 1 -> sum: 0, cout: 1
-1 1 1 -> sum: 1, cout: 1
-1 1 1 -> sum: 1, cout: 1
-1 1 1 -> sum: 1, cout: 1
-1 0 0 -> sum: 1, cout: 0
-1 1 1 -> sum: 1, cout: 1
+0 0 1 -> sum: 1, cout: 0
+0 0 1 -> sum: 1, cout: 0
+0 1 1 -> sum: 0, cout: 1
+0 0 1 -> sum: 1, cout: 0
+0 0 1 -> sum: 1, cout: 0
+0 1 1 -> sum: 0, cout: 1
+1 1 0 -> sum: 0, cout: 1
