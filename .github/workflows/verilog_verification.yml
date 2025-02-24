@@ -28,7 +28,9 @@ jobs:
         pip install pyverilog
         
     - name : verilog file 만들기
-      run: python generate_vfile.py
+      run: |
+        chmod +x verilog/generate_vfile.py  # 실행 권한 부여
+        python verilog/generate_vfile.py  # Python 파일 실행
 
     - name : adder_n.v 파일 추가 (커밋 및 푸시)
       run:  |
@@ -39,7 +41,9 @@ jobs:
         git push --force
 
     - name : verilog tb 만들기
-      run: python generate_tb.py
+      run: |
+        chmod +x verilog/generate_tb.py  # 실행 권한 부여
+        python verilog/generate_tb.py  # Python 파일 실행
 
     - name : adder_tb.v 파일 추가 (커밋 및 푸시)
       run:  |
@@ -53,8 +57,6 @@ jobs:
       run: |
         python generate_input.py
       working-directory: ${{ github.workspace }}
-
-
 
     - name: input.txt 파일 git에 추가(커밋 및 푸시)
       run: |
