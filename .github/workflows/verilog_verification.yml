@@ -36,6 +36,7 @@ jobs:
       run:  |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
+        mv adder_n.v verilog/
         git add verilog/adder_n.v # github에 추가
         git commit --allow-empty -m "Update adder_n.v (auto)"
         git push --force
@@ -49,6 +50,7 @@ jobs:
       run:  |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
+        mv adder_tb.v verilog/
         git add verilog/adder_tb.v # github에 추가
         git commit --allow-empty -m "Update adder_tb.v (auto)" # 변경 사항이 있을 경우 commit
         git push --force
