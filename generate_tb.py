@@ -26,7 +26,7 @@ def gen_tb(tb, bit_width):
 
         
 def fetch_num():
-    with open("","r") as f:
+    with open("number.txt","r") as f:
         bit_width=int(f.read().strip())
     return bit_width
     
