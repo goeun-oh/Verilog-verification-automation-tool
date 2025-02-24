@@ -1,13 +1,16 @@
 # 📂 파일 구조 및 프로젝트 흐름
 📦 Verilog-verification-automation-tool <br>
- ┣ 📜 `README.md`                  # 전체 프로젝트 설명 파일
+ ┣ 📜 `README.md`                  # 전체 프로젝트 설명 파일 <br>
+ ┣ 📂 `explain`            <br>
+ ┗ ┗ 📜 `file_structure.md`        # file 구조 설명 <br>
 
  1️⃣ 입력 데이터 생성 <br>
  ┣ 📜 `generate_input.py`          # random input을 생성하여 input.txt 에 저장 <br>
  ┣ 📜 `input.txt`                  # Full Adder 테스트 입력값 <br>
 
  2️⃣ Verilog 코드 <br>
- ┣ 📜 `adder.v`                    # Verilog Full Adder 코드 <br>
+ ┣ 📜 `adder.v`                    # Verilog 1 bit Full Adder <br>
+ ┣ 📜 `adder_n.v`                  # Verilog n bit Full Adder <br>
  ┣ 📜 `adder_tb.v`                 # Verilog Testbench <br>
  ┣ 📜 `verilog_output.txt`         # Verilog 실행 결과 저장 <br>
 
