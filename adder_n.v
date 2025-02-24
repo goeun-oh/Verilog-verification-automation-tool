@@ -1,4 +1,4 @@
-module adder (input [64:0] a, input [64:0] b, input cin, output [64:0] sum, output cout);
+module adder_n (input [64:0] a, input [64:0] b, input cin, output [64:0] sum, output cout);
     wire [64:0] carry;
 
     adder FA0 (a[0], b[0], cin, sum[0], carry[0]);
