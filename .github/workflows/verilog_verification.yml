@@ -52,18 +52,9 @@ jobs:
     - name: input.txt generate 및 edge case 추가
       run: |
         python generate_input.py
-        python edge_case/edge_case.py
       working-directory: ${{ github.workspace }}
 
-    - name: edge_case.py을 통해 edge case들 input.txt 파일에 추가
-      run: |
-        chmod +x edge_case/edge_case.py  # 실행 권한 부여
-        python edge_case/edge_case.py  # Python 파일 실행
 
-    - name: input.txt 확인 (디버깅)
-      run: |
-        echo "===== input.txt 내용 확인 ====="
-        cat input.txt  # input.txt의 내용을 출력하여 정상적으로 추가되었는지 확인
 
     - name: input.txt 파일 git에 추가(커밋 및 푸시)
       run: |
@@ -74,7 +65,21 @@ jobs:
         git add input.txt --force  # 변경 사항 강제 추가
         git commit --allow-empty -m "Update input.txt with edge cases (auto)"
         git push --force
-    
+        
+    - name: edge_case.py을 통해 edge case들 input.txt 파일에 추가
+      run: |
+        chmod +x edge_case/edge_case.py  # 실행 권한 부여
+        python edge_case/edge_case.py  # Python 파일 실행
+
+    - name: input.txt 파일 git에 추가(커밋 및 푸시)
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions@github.com"
+
+        git status  # 변경 사항 확인
+        git add input.txt --force  # 변경 사항 강제 추가
+        git commit --allow-empty -m "Update input.txt with edge cases (auto)"
+        git push --force
 
     - name:  Run Verilog
       run: iverilog -o adder_sim adder.v adder_n.v adder_tb.v  # Verilog 컴파일
