@@ -98,4 +98,6 @@ bit_width = fetch_num()
 gen_tb("adder_tb.v", bit_width)
 ```
 
- 
+ - adder_n.v와 adder_tb.v 로직을 python 반복문 최적화로 구현
+   1. verilog 연산 로직 재구성 없이 모든 bit에 대한 연산 가능
+   2. 연산 로직 일반화로 예상치 못한 error case 최소화 
