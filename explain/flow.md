@@ -1,26 +1,20 @@
 [Start]  
    │  
    ▼  
-[Generate Verilog Files]  
-     
+[Generate Verilog Files]       
    ├──> [Generate adder.v]  
    ├──> [Run generate_vfile.py]  
-   ├──> [Run generate_tb.py]  
-     
+   ├──> [Run generate_tb.py]       
    ▼  
-[Generate Input.txt]  
-   │  
+[Generate Input.txt]   
    ├──> [Run generate_input.py]  
    ├──> [Run edge_case.py]  
-   ├──> [Generate Input.txt]  
-   │  
+   ├──> [Generate Input.txt]   
    ▼  
-[Run Verilog Simulation]  
-   │  
+[Run Verilog Simulation]    
    ├──> [Compile Verilog (iverilog)]  
    ├──> [Run Simulation (vvp)]  
-   ├──> [Generate verilog_output.txt]  
-   │  
+   ├──> [Generate verilog_output.txt]    
    ▼  
 [Run Python Adder]  
    │  
