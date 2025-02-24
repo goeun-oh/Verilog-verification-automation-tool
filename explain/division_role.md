@@ -16,6 +16,7 @@ Verilog 기반의 디지털 회로 설계 및 시뮬레이션에 대한 경험�
 
 - 다양한 패턴의 랜덤 입력값을 생성하여 input.txt에 저장하는 Python 스크립트 개발 (generate_input.py)
 - Python과 Verilog의 결과를 비교하여 일치 여부를 CSV 파일로 기록 (txt_to_csv.py)
+- edge case 생성 및 입력 스크립트 개발 (edge_case.py)
 🔗 Random Input 생성 & txt_to_csv 설명
 <br>
 
@@ -35,4 +36,5 @@ Verilog 기반의 디지털 회로 설계 및 시뮬레이션에 대한 경험�
 - 프로젝트 기획 및 아이디어 구체화
 - 문서 구조 설계 및 개발 방향성 제안
 - Verilog & Python 기반의 검증 자동화 관련 논문 조사
+- edge case 생성 및 입력 스크립트 개발 (edge_case.py)
 <br>
