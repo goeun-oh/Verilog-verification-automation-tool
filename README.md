@@ -27,7 +27,6 @@ Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈 및 테스트�
 
 ### ✅ **Verilog 시뮬레이션 자동화**
 Linux 환경 및 GitHub Actions를 활용한 Verilog 모듈 자동 검증<br>
-[page]
 <br>
 
 ### ✅ **랜덤 및 엣지 케이스 입력 자동 생성**
