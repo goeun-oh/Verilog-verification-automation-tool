@@ -52,6 +52,7 @@ n-bit Full Adder뿐만 아니라, 향후 다양한 디지털 회로 모듈 검�
 <br>
 ## 📂 파일 구조 및 실행흐름
 - **[파일 구조](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/file_structure.md)**
+- **[실행 흐름](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/flow.md)**
 <br>
 <br>
 
