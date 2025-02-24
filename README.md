@@ -22,7 +22,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 <br>
 
 ## 🏗️ 팀원 역할 분담
-
+**[역할 분담](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/division_role.md)**
 
 
 <br>
