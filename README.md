@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/goeun-oh/Verilog-verification-automation-tool)
 ![GitHub contributors](https://img.shields.io/github/contributors/goeun-oh/Verilog-verification-automation-tool)
 
-## 📖 프로젝트 소개
+## 📖 소개
 이 프로젝트는 **Verilog 기반의 n-bit Full Adder 모듈과 테스트벤치를 자동으로 설계 및 검증하는 Python 기반의 도구**입니다.  
 Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 결과를 비교하여 검증하는 자동화 시스템을 구현하였습니다.
 <br>
