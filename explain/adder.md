@@ -7,9 +7,17 @@
 
 ### ✅ 0. Full-Adder
 ![image](https://github.com/user-attachments/assets/7d655f46-7c9b-4b12-8a2e-0887b21b427e)
+- 1 bit Full Adder
 
 + 입력을 a, b, cin, 출력을 cout, sum로 두는 로직
 + xor gate 2개, and gate 2개, or gate 1개로 이루어짐
+
+  ![image](https://github.com/user-attachments/assets/b08636ae-9234-4328-8e3d-5c0ceb111eef)
+- n bit full Adder
+
++ 1 bit Adder가 n개 이어진 구조
++ 직전 Adder의 cout이 다음 Adder에서 Cin 입력으로 들어감
++ 최종적으로, n bit a,b,sum과 1bit cout을 확인 가능 
   
 ### ✅ 1. adder 로직 설계 (adder.v)
 📌 **기능 상세**
@@ -44,10 +52,3 @@
   - $fclose(file)로 파일 닫기
 
 
-### ✅ 3. 결과 출력 및 파형
-![image](https://github.com/user-attachments/assets/84aff1b9-7caa-41a3-9b9a-cc85e9b62587)
-+ 입력(a,b,cin)과 출력(sum,cout) 값에 따른 출력 결과
-
-
-![image](https://github.com/user-attachments/assets/e523e145-1cfa-4962-9958-1eff2b88a430)
-+ 입력 a=1, b=0, cin=0 / 출력 cout=0, sum=1의 파형
