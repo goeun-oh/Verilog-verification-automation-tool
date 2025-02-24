@@ -1,4 +1,4 @@
-# 모듈 교차 검증 - Python vs Verilog 결과 비교
+# 모듈 교차 검증 - `Python vs Verilog 결과 비교`
 
 ## 📖 result_verification
 verilog simulation 결과를 교차 검증하기위해 
