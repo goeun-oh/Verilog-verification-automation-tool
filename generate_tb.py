@@ -9,9 +9,9 @@ def gen_tb(tb, bit_width):
     
     with open(tb, "w") as tb:
         tb.write("module adder_tb;\n")
-        tb.write(f"    reg [{bit_width}:0] a, b;\n")
+        tb.write(f"    reg [{bit_width-1}:0] a, b;\n")
         tb.write(f"    reg cin;\n")
-        tb.write(f"    wire [{bit_width}:0] sum;\n")
+        tb.write(f"    wire [{bit_width-1}:0] sum;\n")
         tb.write(f"    wire cout;\n")
         tb.writelines(instance_lines)
         tb.writelines(file_lines)
