@@ -19,8 +19,9 @@ Python에서 수행한 Full Adder 연산 결과와 Verilog 시뮬레이션 결�
 <br>
 <br>
 ## 🔧 주요 기능
-✅ **n-bit Full Adder 설계 자동화** <br>
+✅ **n-bit Full Adder 설계 자동화** <br><br>
 Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈 및 테스트벤치를 자동으로 생성  
+- **[1-bit Adder](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder.md)**
 - **[n-bit Full Adder 설계 자동화](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/Automating_n-bit_Full_Adder_Design.md)**
 <br>
 
