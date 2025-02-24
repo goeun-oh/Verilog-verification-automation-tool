@@ -1,8 +1,13 @@
 module adder_tb;
-reg [64:0] a, b;
-reg cin;    wire [64:0] sum;cout;adder uut (
+    reg [64:0] a, b;
+    reg cin;
+    wire [64:0] sum;
+    wire cout;
+adder uut (
     .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)
- );    integer fd_in, fd_out;
+ );
+
+    integer fd_in, fd_out;
     integer scan_result;
 
     initial begin
@@ -16,12 +21,10 @@ reg cin;    wire [64:0] sum;cout;adder uut (
         end
 
         while (!$feof(fd_in)) begin
-            scan_result = $fscanf(fd_in, "%b %b %b
-", a, b, cin);
+            scan_result = $fscanf(fd_in, "%b %b %b\n", a, b, cin);
             #10;
 
-            $fwrite(fd_out, "%b %b %b -> sum: %b, cout: %b
-", a, b, cin, sum, cout);
+            $fwrite(fd_out, "%b %b %b -> sum: %b, cout: %b\n", a, b, cin, sum, cout);
         end
 
         $fclose(fd_in);
