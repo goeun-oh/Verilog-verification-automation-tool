@@ -8,7 +8,6 @@
     2. adder_tb.v 생성
 ---
 
-<br>
 
 ### ✅ trouble shooting
 📌 **수정 전 adder_8bit.v**
@@ -82,25 +81,6 @@ def gen_tb(tb, bit_width):
         tb.writelines(is_fdin)
         tb.writelines(is_input_end)
         tb.writelines(file_close)
-        tb.writelines(line_end)
-        
-        
-        
-
-        
-def fetch_num():
-    with open("number.txt","r") as f:
-        bit_width=int(f.read().strip())
-    return bit_width
-    
-    
-    
-bit_width = fetch_num()
-gen_tb("adder_tb.v", bit_width)
-```
-
-- **adder_n.v 와 adder_tb.v에 바로 write 될 수 있도록 python에서 코드 작성**
-  1. verilog 파일은 별다른 연산 로직 개선 없이 모든 bit에 대한 연산 가능
-  2. 연산 로직 일반화를 통해 예상치 못한 error 케이스 최소
+        tb.writelines(lin화
 
  
