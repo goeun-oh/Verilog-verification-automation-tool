@@ -26,6 +26,12 @@ with open(csv_file_path, 'r') as file:
 # 성공률 계산
 if total_count > 0:
     success_rate = (success_count / total_count) * 100
-    print(f"성공률: {success_rate:.2f}%")
+    result_message = f"성공률: {success_rate:.2f}%"
 else:
-    print("데이터가 없습니다.")
+    result_message = "데이터가 없습니다."
+
+# 결과를 TXT 파일로 저장
+with open(txt_file_path, 'w') as file:
+    file.write(result_message)
+
+print(f"결과가 {txt_file_path}에 저장되었습니다.")
