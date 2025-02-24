@@ -14,7 +14,7 @@
   2. xor gate 2개, and gate 2개, or gate 1개로 이루어짐
 
   ![image](https://github.com/user-attachments/assets/b08636ae-9234-4328-8e3d-5c0ceb111eef)
-- **n bit full Adder**
+- **n bit Full Adder**
 
   1. 1 bit Adder가 n개 이어진 구조
   2. 직전 Adder의 cout이 다음 Adder에서 Cin 입력으로 들어감
