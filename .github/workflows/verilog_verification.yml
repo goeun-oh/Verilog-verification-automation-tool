@@ -51,7 +51,7 @@ jobs:
     
 
     - name:  Run Verilog
-      run: iverilog -o adder_sim adder.v adder_tb.v  # Verilog 컴파일
+      run: iverilog -o adder_sim adder.v adder8.v adder_tb.v  # Verilog 컴파일
 
     - name: Run Verilog Simulation
       run: vvp adder_sim  # 시뮬레이션 실행

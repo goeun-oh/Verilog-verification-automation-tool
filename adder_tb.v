@@ -1,8 +1,11 @@
 module adder_tb;
-    reg a, b, cin;
-    wire sum, cout;
+    reg [7:0] a, b;
+    reg cin;
+  	wire [7:0] sum;
+    wire cout;
     
-    adder uut (
+    
+    adder8 uut (
         .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)
     );
 
@@ -10,6 +13,7 @@ module adder_tb;
     integer scan_result;
 
     initial begin
+
         fd_in = $fopen("input.txt", "r"); // 입력 파일 열기
         fd_out = $fopen("verilog_output.txt", "w"); // 출력 파일 열기
 
