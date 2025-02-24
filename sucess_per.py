@@ -31,8 +31,7 @@ else:
     result_message = "데이터가 없습니다."
 
 # 결과를 TXT 파일로 저장
-result_message="sucess_per.txt"
-with open(txt_file_path, 'w') as file:
+with open("sucess_per.txt", 'w') as file:
     file.write(result_message)
 
 print(f"결과가 {txt_file_path}에 저장되었습니다.")
