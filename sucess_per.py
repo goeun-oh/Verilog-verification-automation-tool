@@ -31,6 +31,7 @@ else:
     result_message = "데이터가 없습니다."
 
 # 결과를 TXT 파일로 저장
+result_message="sucess_per.txt"
 with open(txt_file_path, 'w') as file:
     file.write(result_message)
 
