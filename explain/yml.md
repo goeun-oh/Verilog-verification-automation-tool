@@ -35,3 +35,9 @@
    - `compare_files.py`: Python을 이용한 Verilog vs Python 결과 비교
    - `txt_to_csv.py`: 비교 결과를 CSV 파일로 저장 (`comparison_output.csv` 업데이트)
    - GitHub에 최종 결과 업로드 (`git push`)
+
+## 📄 의존성 스크립트 설명
+- **generate_input.py**: Verilog 및 Python 시뮬레이션에 필요한 입력 데이터를 생성하여 `input.txt` 파일로 저장
+- **run_python_adder.py**: Python으로 Full Adder 로직을 실행하고 결과를 `python_output.txt` 파일에 저장
+- **compare_files.py**: Verilog와 Python 실행 결과를 비교하여 검증 작업 수행
+- **txt_to_csv.py**: 비교 결과를 CSV 형식의 `comparison_output.csv` 파일로 변환하여 저장
