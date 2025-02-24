@@ -25,24 +25,24 @@ Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈 및 테스트�
 - **[n-bit Full Adder 설계 자동화](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/Automating_n-bit_Full_Adder_Design.md)**
 <br>
 
-✅ **Verilog 시뮬레이션 자동화**<br>
+### ✅ **Verilog 시뮬레이션 자동화**<br>
 Linux 환경 및 GitHub Actions를 활용한 Verilog 모듈 자동 검증<br>
 [page]
 <br>
 
-✅ **랜덤 및 엣지 케이스 입력 자동 생성**<br>
+### ✅ **랜덤 및 엣지 케이스 입력 자동 생성**<br>
 n-bit 연산에서 발생할 수 있는 다양한 입력 조합(랜덤 값, 엣지 케이스)을 자동으로 생성하여 테스트 커버리지 향상  
 - **[Random Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/gen_testcase.md)**
 - **[Edge Testcase 고려 계기](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_testing.md)**
 - **[Edge Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_case.md)**
 <br>
 
-✅ **모듈 교차 검증**<br>
+### ✅ **모듈 교차 검증**<br>
 Python에서 연산한 결과와 Verilog 시뮬레이션 결과를 비교하여 정확성을 검증<br>
 - **[교차 검증](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/comparison.md)**
 <br>
 
-✅ **CI/CD 기반 지속적 검증 지원**<br>
+### ✅ **CI/CD 기반 지속적 검증 지원**<br>
 GitHub Actions를 활용한 자동 검증 파이프라인 구축<br>
 <br>
 <br>
