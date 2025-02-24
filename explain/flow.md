@@ -3,39 +3,37 @@
    │  
    ▼  
 [Generate Verilog Files]  
-   ├──> [Generate adder_n.v]  
-   ├──> [Generate adder_tb.v]  
-   └──> [Push to GitHub]  
+   ├──> [Generate adder.v]  
+   ├──> [Run generate_vfile.py]
+   ├──> [Run generate_tb.py]
    │  
    ▼  
 [Generate Input.txt]  
-   ├──> [Add Edge Cases]  
-   └──> [Push to GitHub]  
+   ├──> [Run generate_input.py]
+   ├──> [Run edge_case.py]
+   ├──> [Generate Input.txt]
    │  
    ▼  
 [Run Verilog Simulation]  
    ├──> [Compile Verilog (iverilog)]  
    ├──> [Run Simulation (vvp)]  
-   ├──> [Save verilog_output.txt]  
-   └──> [Push to GitHub]  
+   ├──> [Generate verilog_output.txt]  
    │  
    ▼  
 [Run Python Adder]  
-   ├──> [Generate python_output.txt]  
-   └──> [Push to GitHub]  
+   ├──> [Run python_adder.py] 
+   ├──> [Generate python_output.txt] 
    │  
    ▼  
 [Compare Results]  
    ├──> [compare_files.py]  
    ├──> [txt_to_csv.py]  
    ├──> [Save comparison_output.csv]  
-   └──> [Push to GitHub]  
    │  
    ▼  
 [Calculate Success Rate]  
    ├──> [success_per.py]  
-   ├──> [Save success_per.txt]  
-   └──> [Push to GitHub]  
+   ├──> [Generate success_per.txt]  
    │  
    ▼  
 [End]  
