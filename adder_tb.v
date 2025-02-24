@@ -1,21 +1,19 @@
 module adder_tb;
-    reg [7:0] a, b;
+    reg [64:0] a, b;
     reg cin;
-  	wire [7:0] sum;
+    wire [64:0] sum;
     wire cout;
-    
-    
-    adder8 uut (
-        .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)
-    );
+adder uut (
+    .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)
+ );
 
     integer fd_in, fd_out;
     integer scan_result;
 
     initial begin
 
-        fd_in = $fopen("input.txt", "r"); // 입력 파일 열기
-        fd_out = $fopen("verilog_output.txt", "w"); // 출력 파일 열기
+        fd_in = $fopen("input.txt", "r");
+        fd_out = $fopen("verilog_output.txt", "w")
 
         if (fd_in == 0) begin
             $display("Error: input.txt file not found.");
@@ -23,10 +21,9 @@ module adder_tb;
         end
 
         while (!$feof(fd_in)) begin
-            scan_result = $fscanf(fd_in, "%b %b %b\n", a, b, cin); // input.txt에서 데이터 읽기
-            #10; // 연산 대기
+            scan_result = $fscanf(fd_in, "%b %b %b\n", a, b, cin);
+            #10;
 
-            // 새로운 출력 형식 적용
             $fwrite(fd_out, "%b %b %b -> sum: %b, cout: %b\n", a, b, cin, sum, cout);
         end
 
