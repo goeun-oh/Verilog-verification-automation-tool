@@ -10,7 +10,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 <br>
 
 ## 🔧 주요 기능
-✅ **n-bit Full Adder 설계 자동화** - Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈, 테스트벤치 설계 자동화 
+✅ **n-bit Full Adder 설계 자동화** - Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈, 테스트벤치 설계 자동화  <br>
 ✅ **Verilog simulation 자동화** - linux 가상환경과 github Action을 이용하여 생성한 모듈 자동 검증  
 ✅ **랜덤 입력값 생성** - n-bit의 다양한 input을 자동 생성  
 ✅ **검증 자동화** - 동일 모듈에 대해 Python 실행결과와 Verilog 시뮬레이션 결과를 비교하여 교차 검증
