@@ -26,7 +26,17 @@ jobs:
         sudo apt update
         sudo apt install -y iverilog cpp
         pip install pyverilog
+        
+    - name : verilog file 만들기
+      run: python generate_vfile.py
 
+    - name : adder.v 파일 추가 (커밋 및 푸시)
+      run:  |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions@github.com"
+        git add adder.v # github에 추가
+        git commit -m "Update adder.v (auto)" # 변경 사항이 있을 경우 commit
+        git push --force
 
     - name : verilog tb 만들기
       run: python generate_tb.py
