@@ -44,6 +44,8 @@ Python에서 연산한 결과와 Verilog 시뮬레이션 결과를 비교하여 
 
 ### ✅ **CI/CD 기반 지속적 검증 지원**<br>
 GitHub Actions를 활용한 자동 검증 파이프라인 구축<br>
+- **[GitHub Actions](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/yml.md)**
+
 <br>
 <br>
 ## 🚀 차별점
