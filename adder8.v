@@ -1,42 +1,12 @@
-module adderN #(parameter WIDTH = 8) (
-    input  [WIDTH-1:0] a,
-    input  [WIDTH-1:0] b,
-    input              cin,
-    output [WIDTH-1:0] sum,
-    output             cout
-);
-    // 내부 carry 연결
-    wire [WIDTH-1:0] carry;
-
-    // 첫 번째 비트
-    adder FA0 (
-        .a(a[0]),
-        .b(b[0]),
-        .cin(cin),
-        .sum(sum[0]),
-        .cout(carry[0])
-    );
-
-    // 2번째 비트부터 WIDTH-2번째 비트까지
-    genvar i;
-    generate
-        for (i = 1; i < WIDTH-1; i = i + 1) begin : GEN_FA
-            adder FA_i (
-                .a(a[i]),
-                .b(b[i]),
-                .cin(carry[i-1]),
-                .sum(sum[i]),
-                .cout(carry[i])
-            );
-        end
-    endgenerate
-
-    // 마지막 비트
-    adder FA_last (
-        .a(a[WIDTH-1]),
-        .b(b[WIDTH-1]),
-        .cin(carry[WIDTH-2]),
-        .sum(sum[WIDTH-1]),
-        .cout(cout)
-    );
+module adder8 (input [7:0] a, input [7:0] b, input cin, output [7:0] sum, output cout);
+    wire [7:0] carry;
+    
+    adder FA0 (a[0], b[0], cin, sum[0], carry[0]);
+    adder FA1 (a[1], b[1], carry[0], sum[1], carry[1]);
+    adder FA2 (a[2], b[2], carry[1], sum[2], carry[2]);
+    adder FA3 (a[3], b[3], carry[2], sum[3], carry[3]);
+    adder FA4 (a[4], b[4], carry[3], sum[4], carry[4]);
+    adder FA5 (a[5], b[5], carry[4], sum[5], carry[5]);
+    adder FA6 (a[6], b[6], carry[5], sum[6], carry[6]);
+    adder FA7 (a[7], b[7], carry[6], sum[7], cout);
 endmodule
