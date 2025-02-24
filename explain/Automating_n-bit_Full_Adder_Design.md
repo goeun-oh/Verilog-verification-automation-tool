@@ -1,4 +1,7 @@
 # 🔢n-bit Full Adder 설계 자동화
+1-bit 가산기 모듈인 `adder.v` 를 bit width 만큼 인스턴스하여 n-bit full adder를 자동으로 설계합니다.
+이를 위해, 1-bit 가산기 모듈인 `adder.v`가 정의되어 있어야합니다.
+
 
 ## 🚀주요 기능
 - Python을 활용하여 Verilog 기반의 n-bit Full Adder 모듈과 테스트벤치를 자동 생성함.
