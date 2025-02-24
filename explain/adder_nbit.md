@@ -1,0 +1,21 @@
+# 📌 N Bit 가산기 설계
+---
+## 🚀 주요 기능
+  - adder.v: 1bit 덧셈 연산을 위한 gate 로직
+  - **adder_n.v: n bit 덧셈 연산을 위한 로직**
+  - adder_tb.v: 입력 txt 파일을 읽어와서 입력(a, b, cin), 출력(cout, sum)값 테스트
+---
+
+### ✅ 0. N Bit Full-Adder
+  ![image](https://github.com/user-attachments/assets/b08636ae-9234-4328-8e3d-5c0ceb111eef)
+
+  - 1 bit Adder가 n개 이어진 구조
+  - 직전 Adder의 cout이 다음 Adder에서 Cin 입력으로 들어감
+  - 최종적으로, n bit a,b,sum과 1bit cout을 확인 가능
+
+### ✅ 1. adder_n 로직 설계 (adder_n.v)
+📌 **기능 상세**
+
+  - python(generate_vfile.py)에서 bit width를 입력 받고, n bit 가산기 모듈 adder_n.v 자동 생성
+    1. adder.v n개를 연결
+    
