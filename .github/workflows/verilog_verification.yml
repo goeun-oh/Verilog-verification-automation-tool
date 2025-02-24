@@ -34,9 +34,16 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
-        git add input.txt # input.txt를 github에 추가
-        git commit -m "Update input.txt (auto)" # 변경 사항이 있을 경우 commit
+
+        # 변경된 파일 목록 확인 (디버깅용)
+        git status
+        ls -l input.txt
+
+        # Git이 변경 사항을 감지하도록 강제 적용
+        git add -A
+        git commit --allow-empty -m "Update input.txt with edge cases (auto)"
         git push --force
+
         
     - name: Full Adder Python 실행
       run: python run_python_adder.py
