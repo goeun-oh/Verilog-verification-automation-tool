@@ -19,7 +19,7 @@ def is_edge_case(a, b, bit_width):
     return f"입력 ({a}, {b}) → 일반 케이스"
 
 
-# 결과를 input.txt 파일에 저장
+# 결과를 edge_input.txt 파일에 저장
 with open("edge_input.txt", "w") as file:
     for a, b in test_cases:
         result = is_edge_case(a, b, bit_width)
