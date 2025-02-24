@@ -16,23 +16,17 @@
    ├──> [Run Simulation (vvp)]  
    ├──> [Generate verilog_output.txt]    
    ▼  
-[Run Python Adder]  
-   │  
+[Run Python Adder]    
    ├──> [Run python_adder.py]  
-   ├──> [Generate python_output.txt]  
-   │  
+   ├──> [Generate python_output.txt]    
    ▼  
-[Compare Results]  
-   │  
+[Compare Results]    
    ├──> [Run compare_files.py]  
    ├──> [Run txt_to_csv.py]  
-   ├──> [Save comparison_output.csv]  
-   │  
+   ├──> [Save comparison_output.csv]    
    ▼  
-[Calculate Success Rate]  
-   │  
+[Calculate Success Rate]    
    ├──> [Run success_per.py]  
-   ├──> [Generate success_per.txt]  
-   │  
+   ├──> [Generate success_per.txt]    
    ▼  
 [End]  
