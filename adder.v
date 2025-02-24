@@ -64,5 +64,5 @@ module adder (input [64:0] a, input [64:0] b, input cin, output [64:0] sum, outp
     adder FA60 (a[60], b[60], carry[59], sum[60], carry[60]);
     adder FA61 (a[61], b[61], carry[60], sum[61], carry[61]);
     adder FA62 (a[62], b[62], carry[61], sum[62], carry[62]);
-    adder FA64 (a[bit_width-1], b[bit_width-1], carry[bit_width-2], sum[bit_width-1], cout);
+    adder FA63 (a[63], b[63], carry[62], sum[63], cout);
 endmodule
