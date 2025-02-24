@@ -43,6 +43,6 @@
 
 ## 사용 방법
 1. `number.txt` 파일에 원하는 비트 수를 입력.
-2. `generate_vfile.py` 실행 → `adder_n.v` 파일 생성. (**[N-bit-Adder] (https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder_nbit.md)**)
-3. `generate_tb.py` 실행 → `adder_tb.v` 파일 생성. (**[TestBench-Adder] (https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder_tb.md)**)
+2. `generate_vfile.py` 실행 → `adder_n.v` 파일 생성. (**[N-bit-Adder](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder_nbit.md)**)
+3. `generate_tb.py` 실행 → `adder_tb.v` 파일 생성. (**[TestBench-Adder](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder_tb.md)**)
 4. `adder_tb.v`를 실행하여 결과 확인.
