@@ -18,8 +18,15 @@
     1. input(a,b,cin), output(sum,cout), wire(s1,c1,c2) 선언
     2. 각 연결 및 연산부를 xor, and, or로 결합
 
+### ✅ 2. adder_n 로직 설계 (adder_n.v)
+📌 **기능 상세**
+
+  - python으로부터 parameter를 입력 받고, n bit 가산기 모듈 adder_n.v 자동 생성
+    1. adder.v n개를 연결
     
-### ✅ 2. testbench 실행 (adder_tb.v)
+
+    
+### ✅ 3. testbench 실행 (adder_tb.v)
 📌 **기능 상세**
     
   - file = $fopen(input_file, "r")로 입력 txt 파일 read 후, 변수에 할당
