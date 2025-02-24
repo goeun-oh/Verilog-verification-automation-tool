@@ -53,8 +53,8 @@ n-bit Full Adder뿐만 아니라, 향후 다양한 디지털 회로 모듈 검�
 <br>
 <br>
 
-## 🏗️ 팀원 역할 분담
-**[역할 분담](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/division_role.md)**
+## 🏗️ 팀원 소개 및 역할
+**[팀원 소개](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/division_role.md)**
 
 
 <br>
