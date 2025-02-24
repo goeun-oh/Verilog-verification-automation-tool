@@ -26,4 +26,5 @@ endmodule
 ```
 - 기존 방식은 1 bit adder 8개를 모듈화하여 연결하는 방식
   1. parameter n에 따라 N bit로 확장할 때 어떤 방식으로 코드를 작성할 것인가?
-     1. ㄷㄷ  
+     1. verilog에서 모든 Bit가 적용가능한 Add 연산식 구현 -> 부정확한 연산 값의 문제 발생
+     2. python에서 v 파일 write 과정에서 반복문 최적화를 통해 모든 n bit에 적용가능한 코드 작성 
