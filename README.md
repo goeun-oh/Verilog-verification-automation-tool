@@ -18,18 +18,17 @@ Python에서 수행한 Full Adder 연산 결과와 Verilog 시뮬레이션 결�
 본 프로젝트는 Verilog 모듈 검증을 자동화하여 이러한 문제를 해결하며, 설계자의 수작업을 최소화하면서도 신뢰도 높은 검증을 수행할 수 있도록 지원합니다.
 <br>
 <br>
-
 ## 🔧 주요 기능
 ✅ **n-bit Full Adder 설계 자동화** <br>
-Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈 및 테스트벤치를 자동으로 생성<br>
-[page]
+Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈 및 테스트벤치를 자동으로 생성  
+- **[n-bit Full Adder 설계 자동화](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/Automating_n-bit_Full_Adder_Design.md)**
 
 ✅ **Verilog 시뮬레이션 자동화**<br>
 Linux 환경 및 GitHub Actions를 활용한 Verilog 모듈 자동 검증<br>
 [page]
 
 ✅ **랜덤 및 엣지 케이스 입력 자동 생성**<br>
-n-bit 연산에서 발생할 수 있는 다양한 입력 조합(랜덤 값, 엣지 케이스)을 자동으로 생성하여 테스트 커버리지 향상<br>
+n-bit 연산에서 발생할 수 있는 다양한 입력 조합(랜덤 값, 엣지 케이스)을 자동으로 생성하여 테스트 커버리지 향상  
 - **[Random Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/gen_testcase.md)**
 - **[Edge Testcase 고려 계기](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_testing.md)**
 - **[Edge Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_case.md)**
