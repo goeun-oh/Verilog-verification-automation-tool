@@ -117,7 +117,8 @@ jobs:
         git commit -m "Update success_per.txt (auto)" # 변경 사항이 있을 경우 commit
         git push --force
 
-      
+    - name: edge_case.py을 통해 edge case들 input.txt 파일에 추가
+      run: edge_case/edge_case.py
 
 
       continue-on-error: true #파일 변경이 없을 경우 오류 무시
