@@ -107,7 +107,7 @@ jobs:
         git push # 변경 사항을 git에 push
 
     - name: 성공률 도출후 txt 파일로 저장
-      run: python success_per.txt
+      run: python success_per.py
 
       
       
