@@ -2,9 +2,6 @@
 [Start]  
    │  
    ▼  
-[Setup Environment]  
-   │  
-   ▼  
 [Generate Verilog Files]  
    ├──> [Generate adder_n.v]  
    ├──> [Generate adder_tb.v]  
