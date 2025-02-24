@@ -1,5 +1,5 @@
 def gen_tb(tb, bit_width):
-    instance_lines = ["adder uut (\n", "    .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)\n", " );\n\n" ]
+    instance_lines = ["adder_n uut (\n", "    .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)\n", " );\n\n" ]
     file_lines=["    integer fd_in, fd_out;\n", "    integer scan_result;\n", "\n"]
     initial_lines=["    initial begin\n\n", '        fd_in = $fopen("input.txt", "r");\n','        fd_out = $fopen("verilog_output.txt", "w")\n\n', ]
     is_fdin=["        if (fd_in == 0) begin\n", '            $display("Error: input.txt file not found.");\n', "            $finish;\n", "        end\n\n"]
