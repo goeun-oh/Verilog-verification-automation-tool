@@ -35,7 +35,7 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
         git add adder_n.v # github에 추가
-        git commit -m "Update adder_n.v (auto)" # 변경 사항이 있을 경우 commit
+        git commit --allow-empty -m "Update adder_n.v (auto)"
         git push --force
 
     - name : verilog tb 만들기
