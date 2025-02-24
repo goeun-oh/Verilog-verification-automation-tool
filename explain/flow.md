@@ -2,11 +2,11 @@
    │  
    ▼  
 [Generate Verilog Files]  
-   │  
+     
    ├──> [Generate adder.v]  
    ├──> [Run generate_vfile.py]  
    ├──> [Run generate_tb.py]  
-   │  
+     
    ▼  
 [Generate Input.txt]  
    │  
