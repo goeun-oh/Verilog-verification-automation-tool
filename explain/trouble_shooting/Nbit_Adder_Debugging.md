@@ -8,6 +8,8 @@
     2. adder_tb.v 생성
 ---
 
+<br>
+
 ### ✅ trouble shooting
 📌 **수정 전 adder_8bit.v**
   ```python
@@ -27,8 +29,9 @@ endmodule
 - **기존 방식은 1 bit adder 8개를 모듈화하여 연결하는 방식**
   1. parameter n에 따라 N bit로 확장할 때 어떤 방식으로 코드를 작성할 것인가?
      1. verilog에서 모든 Bit가 적용가능한 Add 연산식 구현 -> 부정확한 연산 값의 문제 발생
-     2. python에서 v 파일 write 과정에서 반복문 최적화를 통해 모든 n bit에 적용가능한 코드 작성 
+     2. python에서 v 파일 write 과정에서 반복문 최적화를 통해 모든 n bit에 적용가능한 코드 작성 **(해당 방식을 채택)**
 
+<br>
 
 📌 **최적화한 generate_vfile.py**
   ```python
@@ -54,6 +57,7 @@ bit_width=fetch_num()
 gen_v("adder_n.v", bit_width)
 ```
 
+<br>
 
 📌 **최적화한 generate_tb.py**
   ```python
@@ -97,5 +101,6 @@ gen_tb("adder_tb.v", bit_width)
 
 - **adder_n.v 와 adder_tb.v에 바로 write 될 수 있도록 python에서 코드 작성**
   1. verilog 파일은 별다른 연산 로직 개선 없이 모든 bit에 대한 연산 가능
+  2. 연산 로직 일반화를 통해 예상치 못한 error 케이스 최소
 
  
