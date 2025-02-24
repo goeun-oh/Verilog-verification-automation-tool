@@ -21,46 +21,59 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 ### **🔹 1️⃣ Verilog 설계**
 **🛠️ 양지훈**: 
 - Verilog를 기반으로 Full Adder 설계 & 시뮬레이션 (`adder.v`)
-- input.txt 의 data를 input으로 하고, 도출된 output을 `verilog_output.txt`에 기록하는 testbench 작성 ( `adder_tb.v`)
-- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`)
+- input.txt 의 data를 input으로 하고, 도출된 output을 `verilog_output.txt`에 기록하는 testbench 작성 ( `adder_tb.v`) 
+- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
+**[가산기 설계 (feature/verilog_adder branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/verilog_adder/README.md)**
+<br>
 
 ### **🔹 2️⃣ Python 입력 생성**
 **💻 유승우**: 
 - random input을 생성하여 `input.txt`에 기록하는 Python 프로그램 작성 (`generate_input.py`)
-- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`)
+- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
+**[Random Input 생성 txt_to_csv 설명 (feature/python_input_gen branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/python_input_gen/README.md)**
+<br>
 
 ### **🔹 3️⃣ 결과 검증 & 오류 감지**
 **🔍 오고은**:
 - **프로젝트 총괄**
 - Python 기반 결과 도출 및 Verilog Output과 비교 (`run_python_adder.py`, `compare_files.py`)
-- Git Action을 활용한 자동화 스크립트 작성 (`github/workflows/verilog_verification.yml`)
+- Git Action을 활용한 자동화 스크립트 작성 (`github/workflows/verilog_verification.yml`) <br>
+**[Python vs Verilog 결과 비교 (feature/result_verification branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/result_verification/README.md)**
+<br>
 
-### **🔹 4️⃣ 테스트 자동화 및 프로젝트 최적화**
-- **🚀 유진모**:  
+### **🔹 4️⃣ 검증 자동화 연구 & 기획**
+**🚀 유진모**:  
+- 프로젝트 기획 및 아이디어 구체화
+- 문서 구조 및 개발 방향성 제안
+- Verilog & Python 기반의 검증 자동화 논문 조사
 <br>
 
 
-# 📂 파일 구조 (feature/result_verification)
+# 📂 파일 구조 및 프로젝트 흐름
 📦 Verilog-verification-automation-tool <br>
- ┣ 📜 `README.md`                 # 전체 프로젝트 설명 파일
+ ┣ 📜 `README.md`                  # 전체 프로젝트 설명 파일
 
- 🔹 Verilog 코드 <br>
- ┣ 📜 `adder.v`                   # Verilog Full Adder 코드 <br>
- ┣ 📜 `adder_tb.v`                # Verilog Testbench <br>
- ┣ 📜 `verilog_output.txt`        # Verilog 실행 결과 저장
+ 1️⃣ 입력 데이터 생성 <br>
+ ┣ 📜 `generate_input.py`          # random input을 생성하여 input.txt 에 저장 <br>
+ ┣ 📜 `input.txt`                  # Full Adder 테스트 입력값 <br>
 
-🔹 입력 데이터 생성 <br>
- ┣ 📜 `generate_input.py`         # random input을 생성하여 input.txt 에 저장 <br>
- ┣ 📜 `input.txt`                 # Full Adder 테스트 입력값
+ 2️⃣ Verilog 코드 <br>
+ ┣ 📜 `adder.v`                    # Verilog Full Adder 코드 <br>
+ ┣ 📜 `adder_tb.v`                 # Verilog Testbench <br>
+ ┣ 📜 `verilog_output.txt`         # Verilog 실행 결과 저장 <br>
 
+ 3️⃣ Python 연산 및 결과 저장 <br>
+ ┣ 📜 `run_python_adder.py`        # Python에서 Full Adder 실행 및 결과 저장 <br>
+ ┣ 📜 `python_output.txt`          # Python 연산 결과 저장 <br>
 
-🔹 Python 연산 및 결과 저장 <br>
- ┣ 📜 `run_python_adder.py`      # Python에서 Full Adder 실행 및 결과 저장 <br>
- ┣ 📜 `python_output.txt`         # Python 연산 결과 저장
-
-🔹 결과 비교 및 검증 <br>
- ┣ 📜 `compare_files.py`          # Python과 Verilog 결과 비교 스크립트 <br>
- ┣ 📜 `txt_to_csv.py`             # compare_files.py의 결과를 csv 형식으로 저장 
+ 4️⃣ 결과 비교 및 검증 <br>
+ ┣ 📜 `compare_files.py`           # Python과 Verilog 결과 비교 스크립트 <br>
+ ┣ 📜 `txt_to_csv.py`              # compare_files.py의 결과를 csv 형식으로 저장 <br>
+ ┣ 📜 `comparision_output.csv`     # 저장된 csv 파일 <br>
+ ┣ 📂 .github/workflows            # GitHub Actions 워크플로우 파일 저장소 <br>
+ ┗ ┗ 📜 `verilog_verification.yml` # GitHub Actions 자동화 스크립트 <br>
+ 
+<br>
 <br>
 
 # 📌 프로젝트 변경 기록
