@@ -118,7 +118,9 @@ jobs:
         git push --force
 
     - name: edge_case.py을 통해 edge case들 input.txt 파일에 추가
-      run: edge_case/edge_case.py
+      run: |
+        chmod +x edge_case/edge_case.py  # 실행 권한 부여
+        python edge_case/edge_case.py  # Python 파일 실행
 
 
       continue-on-error: true #파일 변경이 없을 경우 오류 무시
