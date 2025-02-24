@@ -57,8 +57,8 @@ jobs:
 
     - name: edge_case.py을 통해 edge case들 input.txt 파일에 추가
       run: |
-        chmod +x edge_case.py  # 실행 권한 부여
-        python edge_case.py  # Python 파일 실행
+        chmod +x edge_case/edge_case.py  # 실행 권한 부여
+        python edge_case/edge_case.py  # Python 파일 실행
 
     - name: input.txt 확인 (디버깅)
       run: |
