@@ -30,7 +30,7 @@ endmodule
      2. python에서 v 파일 write 과정에서 반복문 최적화를 통해 모든 n bit에 적용가능한 코드 작성 
 
 
-📌 ** 최적화한 generate_vfile.py**
+📌 **최적화한 generate_vfile.py**
   ```python
 def gen_v(v, bit_width):
     with open(v, "w") as v:
@@ -55,7 +55,7 @@ gen_v("adder_n.v", bit_width)
 ```
 
 
-📌 ** 최적화한 generate_tb.py**
+📌 **최적화한 generate_tb.py**
   ```python
 def gen_tb(tb, bit_width):
     instance_lines = ["adder_n uut (\n", "    .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)\n", " );\n\n" ]
