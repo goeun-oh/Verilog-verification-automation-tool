@@ -81,6 +81,21 @@ def gen_tb(tb, bit_width):
         tb.writelines(is_fdin)
         tb.writelines(is_input_end)
         tb.writelines(file_close)
-        tb.writelines(lin화
+        tb.writelines(line_end)
+        
+        
+        
+
+        
+def fetch_num():
+    with open("number.txt","r") as f:
+        bit_width=int(f.read().strip())
+    return bit_width
+    
+    
+    
+bit_width = fetch_num()
+gen_tb("adder_tb.v", bit_width)
+```
 
  
