@@ -4,14 +4,14 @@
  ┣ 📂 `explain`            <br>
  ┗ ┗ 📜 `file_structure.md`        # file 구조 설명 <br>
 
- 1️⃣ testcase / n-bit verilog, tb file 자동 생성 <br>
+ 1️⃣ testcase input 자동 생성 <br>
  ┣ 📜 `number.txt`                 # bit width 를 저장 <br>
- ┣ 📜 `generate_vfile.py`          # `number.txt` 에 저장된 정수(n)을 바탕으로 n-bit adder 모듈 자동 생성 <br>
- ┣ 📜 `generate_tb.py`             # `number.txt` 에 저장된 정수(n)을 바탕으로 n-bit adder testbench 모듈 자동 생성 <br>
  ┣ 📜 `generate_input.py`          # n-bit 를 가지는 random input 6개를 생성하여 `input.txt` 에 저장 <br>
  ┗ 📜 `input.txt`                  
 
  2️⃣ Verilog 코드 <br>
+ ┣ 📜 `generate_vfile.py`          # `number.txt` 에 저장된 정수(n)을 바탕으로 n-bit adder 모듈 자동 생성 <br>
+ ┣ 📜 `generate_tb.py`             # `number.txt` 에 저장된 정수(n)을 바탕으로 n-bit adder testbench 모듈 자동 생성 <br>
  ┣ 📜 `adder.v`                    # Verilog 1 bit Full Adder <br>
  ┣ 📜 `adder_n.v`                  # `generate_vfile.py`에 의해 자동생성된 Verilog n bit Full Adder 모듈 <br>
  ┣ 📜 `adder_tb.v`                 # `generate_tb.py`에 의해 자동생성된 Verilog Testbench 모듈 <br>
