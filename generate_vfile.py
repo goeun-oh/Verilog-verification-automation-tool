@@ -5,7 +5,7 @@ def gen_v(v, bit_width):
         v.write(f"    adder FA0 (a[0], b[0], cin, sum[0], carry[0]);\n")
         for i in range(bit_width-2):
             v.write(f"    adder FA{i+1} (a[{i+1}], b[{i+1}], carry[{i}], sum[{i+1}], carry[{i+1}]);\n")
-        v.write(f"    adder FA{bit_width} (a[bit_width-1], b[bit_width-1], carry[bit_width-2], sum[bit_width-1], cout);\n")
+        v.write(f"    adder FA{bit_width-1} (a[{bit_width-1}], b[{bit_width-1}], carry[{bit_width-2}], sum[{bit_width-1}], cout);\n")
         v.write("endmodule")
         
         
