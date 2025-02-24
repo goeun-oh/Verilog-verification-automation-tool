@@ -20,7 +20,7 @@ def is_edge_case(a, b, bit_width):
 
 
 # 결과를 input.txt 파일에 저장
-with open("input.txt", "w") as file:
+with open("edge_input.txt", "w") as file:
     for a, b in test_cases:
         result = is_edge_case(a, b, bit_width)
         file.write(result + "\n")
