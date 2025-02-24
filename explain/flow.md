@@ -1,5 +1,4 @@
-[Start]  
-   │  
+[Start]   
    ▼  
 [Generate Verilog Files]       
    ├──> [Generate adder.v]  
