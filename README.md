@@ -23,7 +23,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 - Verilog를 기반으로 Full Adder 설계 & 시뮬레이션 (`adder.v`)
 - input.txt 의 data를 input으로 하고, 도출된 output을 `verilog_output.txt`에 기록하는 testbench 작성 ( `adder_tb.v`) 
 - Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
-**[가산기 설계](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix/explain/adder.md)**
+**[가산기 설계](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder.md)**
 <br>
 
 ### **🔹 2️⃣ Python 입력 생성**
