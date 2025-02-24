@@ -1,4 +1,4 @@
-# 📂 파일 구조 및 프로젝트 흐름
+# 📂 파일 구조
 📦 Verilog-verification-automation-tool <br>
  ┣ 📜 `README.md`                  # 전체 프로젝트 설명 파일 <br>
  ┣ 📂 `explain`            <br>
