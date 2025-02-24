@@ -18,7 +18,7 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 <br>
 <br>
 
-## 📂 파일 구조 및 프로젝트 흐름
+## 📂 파일 구조 및 실행흐름
 - **[파일 구조](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/file_structure.md)**
 <br>
 <br>
