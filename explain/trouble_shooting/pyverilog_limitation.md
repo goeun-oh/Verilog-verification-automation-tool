@@ -12,12 +12,6 @@
 - `iverilog` 설치 후, 다음 명령어를 실행하여 Verilog 시뮬레이션 수행:  
 
 ```bash
-sudo apt-get update && sudo apt-get install -y iverilog  # Ubuntu 환경에서 설치
-iverilog -o testbench.out adder_tb.v adder.v  # Verilog 컴파일
-vvp testbench.out  # 실행
-```
-
-💡 **Tip:** 필요 시 `gtkwave`를 설치하여 파형 확인 가능.  
-```bash
-sudo apt-get install -y gtkwave
+- name: Install Icarus Verilog
+      run: sudo apt-get update && sudo apt-get install -y iverilog  # iverilog 설치
 ```
