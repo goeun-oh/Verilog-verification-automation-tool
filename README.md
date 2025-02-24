@@ -48,7 +48,8 @@ GitHub Actions를 활용한 자동화된 검증 환경을 제공하여 코드 �
 
 ✔ **확장성 높은 구조**<br>
 n-bit Full Adder뿐만 아니라, 향후 다양한 디지털 회로 모듈 검증으로 확장 가능<br>
-
+<br>
+<br>
 ## 📂 파일 구조 및 실행흐름
 - **[파일 구조](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/file_structure.md)**
 <br>
