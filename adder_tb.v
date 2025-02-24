@@ -3,7 +3,7 @@ module adder_tb;
     reg cin;
     wire [64:0] sum;
     wire cout;
-adder uut (
+adder_n uut (
     .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)
  );
 
