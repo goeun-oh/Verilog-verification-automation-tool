@@ -24,7 +24,7 @@
  4️⃣ 결과 비교 및 검증 <br>
  ┣ 📜 `compare_files.py`           # Python과 Verilog 결과 비교 스크립트 <br>
  ┣ 📜 `txt_to_csv.py`              # `compare_files.py`의 결과를 csv 형식으로 저장 <br>
- ┣ 📜 `comparision_output.csv`
+ ┣ 📜 `comparision_output.csv` <br>
  ┣ 📜 `success_per.py`             # 누적된 testcase에 대한 성공률 계산 <br>
  ┣ 📜 `success_per.txt`            # testcase 누적 성공률 저장 <br>
  ┣ 📂 `.github/workflows`          # GitHub Actions 워크플로우 파일 저장소 <br>
