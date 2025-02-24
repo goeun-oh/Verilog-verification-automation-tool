@@ -109,7 +109,7 @@ jobs:
     - name: 성공률 도출후 txt 파일로 저장
       run: python success_per.py
 
-    - name: sucess_per.txt 파일 git에 추가(커밋 및 푸시)
+    - name: success_per.txt 파일 git에 추가(커밋 및 푸시)
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
