@@ -8,7 +8,6 @@
 Verilog 기반의 n-bit Full Adder 모듈과 테스트벤치를 자동으로 생성하고 검증하는 Python 기반의 자동화 도구입니다.  
 Python에서 수행한 Full Adder 연산 결과와 Verilog 시뮬레이션 결과를 비교하여 검증하는 자동화된 검증 시스템을 제공합니다.  
 본 프로젝트는 설계자가 보다 효율적으로 Verilog 하드웨어 모듈을 개발하고 검증할 수 있도록 지원하는 것을 목표로 합니다.
-
 <br>
 
 ## 🎯 목적
@@ -24,24 +23,24 @@ Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈 및 테스트�
 - **[모듈/테스트벤치 설계 자동화](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/Automating_n-bit_Full_Adder_Design.md)**
 <br>
 
-### ✅ **Verilog 시뮬레이션 자동화**<br>
+### ✅ **Verilog 시뮬레이션 자동화**
 Linux 환경 및 GitHub Actions를 활용한 Verilog 모듈 자동 검증<br>
 [page]
 <br>
 
-### ✅ **랜덤 및 엣지 케이스 입력 자동 생성**<br>
+### ✅ **랜덤 및 엣지 케이스 입력 자동 생성**
 n-bit 연산에서 발생할 수 있는 다양한 입력 조합(랜덤 값, 엣지 케이스)을 자동으로 생성하여 테스트 커버리지 향상  
 - **[Random Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/gen_testcase.md)**
 - **[Edge Testcase 고려 계기](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_testing.md)**
 - **[Edge Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_case.md)**
 <br>
 
-### ✅ **모듈 교차 검증**<br>
+### ✅ **모듈 교차 검증**
 Python에서 연산한 결과와 Verilog 시뮬레이션 결과를 비교하여 정확성을 검증<br>
 - **[교차 검증](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/comparison.md)**
 <br>
 
-### ✅ **CI/CD 기반 지속적 검증 지원**<br>
+### ✅ **CI/CD 기반 지속적 검증 지원**
 GitHub Actions를 활용한 자동 검증 파이프라인 구축<br>
 - **[GitHub Actions](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/yml.md)**
 <br>
