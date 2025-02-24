@@ -1,7 +1,7 @@
 module adder_tb;
-    reg [16:0] a, b;
+    reg [15:0] a, b;
     reg cin;
-    wire [16:0] sum;
+    wire [15:0] sum;
     wire cout;
 adder_n uut (
     .a(a), .b(b), .cin(cin), .sum(sum), .cout(cout)
