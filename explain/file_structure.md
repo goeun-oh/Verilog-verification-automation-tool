@@ -27,5 +27,5 @@
  ┣ 📜 `comparision_output.csv`
  ┣ 📜 `success_per.py`             # 누적된 testcase에 대한 성공률 계산 <br>
  ┣ 📜 `success_per.txt`            # testcase 누적 성공률 저장 <br>
- ┣ 📂 .github/workflows            # GitHub Actions 워크플로우 파일 저장소 <br>
+ ┣ 📂 `.github/workflows`          # GitHub Actions 워크플로우 파일 저장소 <br>
  ┗ ┗ 📜 `verilog_verification.yml` # GitHub Actions 자동화 스크립트 <br>
