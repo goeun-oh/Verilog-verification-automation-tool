@@ -1,31 +1,38 @@
-## 🏗️ 팀원 역할 분담
+## 🏗️ 팀원 소개
+**🛠️ 양지훈 | Verilog 설계 & 시뮬레이션 담당**
+서울대학교 전기정보공학부
+Verilog 기반의 디지털 회로 설계 및 시뮬레이션에 대한 경험이 풍부하며, 본 프로젝트에서 Full Adder의 Verilog 설계 및 테스트벤치 구현을 담당했습니다.
 
-### **🔹 1️⃣ Verilog 설계**
-**🛠️ 양지훈**: 
-- Verilog를 기반으로 Full Adder 설계 & 시뮬레이션 (`adder.v`)
-- input.txt 의 data를 input으로 하고, 도출된 output을 `verilog_output.txt`에 기록하는 testbench 작성 ( `adder_tb.v`) 
-- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
-**[가산기 설계](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder.md)**
+- Verilog를 기반으로 Full Adder 설계 & 시뮬레이션 (adder.v)
+- 입력 데이터를 받아 연산을 수행하고 결과를 저장하는 테스트벤치 작성 (adder_tb.v)
+- Python과 Verilog의 출력을 비교하여 검증하는 Python 스크립트 개발 (txt_to_csv.py)
+🔗 가산기 설계
+
 <br>
 
-### **🔹 2️⃣ Python 입력 생성**
-**💻 유승우**: 
-- random input을 생성하여 `input.txt`에 기록하는 Python 프로그램 작성 (`generate_input.py`)
-- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
-**[Random Input 생성 txt_to_csv 설명](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/gen_input.md)**
+**💻 유승우 | 테스트 입력 데이터 생성 및 검증 자동화 담당**
+KAIST 전산학부
+랜덤 데이터 생성 및 자동화된 검증 프로세스에 관심이 있으며, 본 프로젝트에서 입력 데이터 자동 생성과 검증 데이터 기록 시스템을 구축했습니다.
+
+- 다양한 패턴의 랜덤 입력값을 생성하여 input.txt에 저장하는 Python 스크립트 개발 (generate_input.py)
+- Python과 Verilog의 결과를 비교하여 일치 여부를 CSV 파일로 기록 (txt_to_csv.py)
+🔗 Random Input 생성 & txt_to_csv 설명
 <br>
 
-### **🔹 3️⃣ 결과 검증 & 오류 감지**
-**🔍 오고은**:
-- **프로젝트 총괄**
-- Python 기반 결과 도출 및 Verilog Output과 비교 (`run_python_adder.py`, `compare_files.py`)
-- Git Action을 활용한 자동화 스크립트 작성 (`github/workflows/verilog_verification.yml`) <br>
-**[Python vs Verilog 결과 비교](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/comparison.md)**
+**🔍 오고은 | 프로젝트 총괄 & 자동화 시스템 구축**
+POSTECH 컴퓨터공학과
+임베디드 시스템 및 하드웨어 검증 자동화에 관심이 있으며, 본 프로젝트에서 Python 기반의 연산 결과 도출, Verilog 출력 비교, CI/CD 자동화를 담당했습니다.
+
+- Python 기반 Full Adder 연산 수행 및 Verilog Output 비교 (run_python_adder.py, compare_files.py)
+- GitHub Actions을 활용한 CI/CD 자동화 구축 (github/workflows/verilog_verification.yml)
+🔗 Python vs Verilog 결과 비교
 <br>
 
-### **🔹 4️⃣ 검증 자동화 연구 & 기획**
-**🚀 유진모**:  
+**🚀 유진모 | 프로젝트 기획 & 연구**
+한양대학교 전자공학부
+디지털 회로 설계 및 검증 자동화 기술 연구를 진행하며, 본 프로젝트에서 개발 방향성 제안 및 관련 논문 조사를 담당했습니다.
+
 - 프로젝트 기획 및 아이디어 구체화
-- 문서 구조 및 개발 방향성 제안
-- Verilog & Python 기반의 검증 자동화 논문 조사
+- 문서 구조 설계 및 개발 방향성 제안
+- Verilog & Python 기반의 검증 자동화 관련 논문 조사
 <br>
