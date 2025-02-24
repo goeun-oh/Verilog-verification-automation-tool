@@ -76,7 +76,4 @@ Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 �
 <br>
 <br>
 
-# 📌 프로젝트 변경 기록
-🔹 최신 변경 사항은 아래에서 확인하세요!  
-📌 **[CHANGELOG.md (develop branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/develop/CHANGELOG.md)**
 
