@@ -1,8 +1,8 @@
-# Result Verification - Python vs Verilog 결과 비교
+# 모듈 교차 검증 - Python vs Verilog 결과 비교
 
-## 📖 result_verification branch
-이 branch는 verilog simulation 결과를 교차 검증하기위해 
-Python 상에서 `adder.v`와 같은 기능을 하는 가산기를 구현하고, 이 결과를 verilog simulation 결과와 일치하는지 확인하는 기능을 포함합니다.
+## 📖 result_verification
+verilog simulation 결과를 교차 검증하기위해 
+Python 상에서 `adder.v`와 같은 기능을 하는 가산기를 구현하고, 이 결과를 verilog simulation 결과와 일치하는지 확인합니다.
 
 
 ## 🚀 주요 기능
