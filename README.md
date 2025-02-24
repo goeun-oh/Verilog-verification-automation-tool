@@ -31,10 +31,12 @@ Linux 환경 및 GitHub Actions를 활용한 Verilog 모듈 자동 검증<br>
 ✅ **랜덤 및 엣지 케이스 입력 자동 생성**<br>
 n-bit 연산에서 발생할 수 있는 다양한 입력 조합(랜덤 값, 엣지 케이스)을 자동으로 생성하여 테스트 커버리지 향상<br>
 - **[Random Test Case 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/gen_testcase.md)**
+<br>
 
-
-✅ **Python-기반 교차 검증**<br>
+✅ **모듈 교차 검증**<br>
 Python에서 연산한 결과와 Verilog 시뮬레이션 결과를 비교하여 정확성을 검증<br>
+- **[교차 검증](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/comparison.md)**
+<br>
 
 ✅ **CI/CD 기반 지속적 검증 지원**<br>
 GitHub Actions를 활용한 자동 검증 파이프라인 구축<br>
