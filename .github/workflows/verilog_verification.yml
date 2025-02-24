@@ -84,7 +84,11 @@ jobs:
         git push --force
 
     - name:  Run Verilog
-      run: iverilog -o adder_sim adder.v adder_n.v adder_tb.v  # Verilog 컴파일
+      run: |
+        chmod +x verilog/adder_n.v  # 실행 권한 부여
+        chmod +x verilog/adder.v  # 실행 권한 부여
+        chmod +x verilog/adder_tb.v  # 실행 권한 부여
+        iverilog -o adder_sim verilog/adder.v verilog/adder_n.v verilog/adder_tb.v  # Verilog 컴파일
 
     - name: Run Verilog Simulation
       run: vvp adder_sim  # 시뮬레이션 실행
