@@ -13,7 +13,7 @@ adder_n uut (
     initial begin
 
         fd_in = $fopen("input.txt", "r");
-        fd_out = $fopen("verilog_output.txt", "w")
+        fd_out = $fopen("verilog_output.txt", "w");
 
         if (fd_in == 0) begin
             $display("Error: input.txt file not found.");
