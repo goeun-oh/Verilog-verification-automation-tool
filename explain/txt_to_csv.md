@@ -49,7 +49,7 @@ py_sum과 verilog_sum 그리고 py_cout과 verilog_cout을 비교하여 일치 �
 📌 **기능 상세**
   - with open(output_csv, "w", newline="") as csvfile:
     
-    1. 덮어쓰는 방식으로 csv 파일이 생성되므로 csv 파일에 추가되는 방식으로 변경하낟.
+    1. 덮어쓰는 방식으로 csv 파일이 생성되므로 csv 파일에 추가되는 방식으로 변경한다.
        
     2. csv 파일 작성 혹은 존재 확인
        file_exists = os.path.isfile(output_csv)
