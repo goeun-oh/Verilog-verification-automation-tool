@@ -1,7 +1,7 @@
 import csv
 
 # CSV 파일 경로
-csv_file_path = 'comparison_output.csv'
+csv_file_path = '../comparison_output.csv'
 
 # 성공 횟수와 전체 횟수를 저장할 변수 초기화
 success_count = 0
