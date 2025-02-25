@@ -3,6 +3,7 @@ import os
 # CSV 파일 경로
 script_dir=os.path.dirname(os.path.abspath(__file__))
 csv_file_path = os.path.join(script_dir,"..",'comparison_output.csv')
+txt_file_path = os.path.join(script_dir, "..", "success_per.txt")
 
 # 성공 횟수와 전체 횟수를 저장할 변수 초기화
 success_count = 0
@@ -32,5 +33,5 @@ else:
     result_message = "데이터가 없습니다."
 
 # 결과를 TXT 파일로 저장
-with open("success_per.txt", 'w') as file:
+with open(txt_file_path, 'w') as file:
     file.write(result_message)
