@@ -15,7 +15,7 @@ jobs:
 
     - name: Install Icarus Verilog
       run: sudo apt-get update && sudo apt-get install -y iverilog  # iverilog 설치
-      
+
     - name: Python 환경 설정
       uses: actions/setup-python@v4
       with:
@@ -130,6 +130,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
+        git add comparison_output.csv # 날씨 데이터 저장 csv를 github에 추가
         git add comparison_output.csv # 비교 결과 데이터 csv를 github에 추가
         git commit -m "Update comparison_output.csv (auto)" # 변경 사항이 있을 경우 commit
         git push # 변경 사항을 git에 push
@@ -146,4 +147,3 @@ jobs:
         git push --force
 
       continue-on-error: true #파일 변경이 없을 경우 오류 무시
-      
