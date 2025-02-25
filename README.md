@@ -68,8 +68,8 @@ n-bit Full Adder뿐만 아니라, 향후 다양한 디지털 회로 모듈 검�
   
 ## 🚀 트러블슈팅
 **[1️⃣ 8bit -> n-bit adder 확장 이슈](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/Nbit_Adder_Debugging.md)** <br>
-**[2️⃣ verilog 컴파일 문제](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/pyverilog_limitation.md)**
-**[3️⃣](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/RandomTesting_limitation.md)** <br>
+**[2️⃣ verilog 컴파일 문제](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/pyverilog_limitation.md)**  
+**[3️⃣ 검증 신뢰도 문제](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/RandomTesting_limitation.md)** <br>
 
 ## 🏗️ 팀원 소개 및 역할
 **[팀원 소개](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/division_role.md)**
