@@ -11,7 +11,7 @@ total_count = 0
 # CSV 파일 읽기
 with open(csv_file_path, 'r') as file:
     csv_reader = csv.reader(file)
-    
+    next(csv_reader,None)    # 헤더를 포함하면 안되므로 건너뛰기
     # 각 행을 순회
     for row in csv_reader:
         # 마지막 열의 값 확인
