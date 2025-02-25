@@ -30,7 +30,7 @@ if total_count > 0:
     result_message = f"성공률: {success_rate:.2f}%"
 else:
     result_message = "데이터가 없습니다."
-
+print(success_count, total_count)
 # 결과를 TXT 파일로 저장
 with open("success_per.txt", 'w') as file:
     file.write(result_message)
