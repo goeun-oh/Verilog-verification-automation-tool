@@ -148,8 +148,8 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
-        if [ -f "result/success/success_per.txt" ]; then
-          mv result/success/success_per.txt result/
+        if [ -f "result/success_per.txt" ]; then
+         echo "success파일 생성됨"
         else
           echo "⚠️ Error: success_per.txt 파일이 생성되지 않았습니다!"
           exit 1
