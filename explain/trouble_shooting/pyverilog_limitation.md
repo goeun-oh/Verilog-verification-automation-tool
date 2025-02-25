@@ -2,7 +2,7 @@
 
 #### **Verilog 시뮬레이션이 작동하지 않는 문제 발생**  
 🔍 **문제:**   
-설계한 가산기 모듈(`adder.v`, `adder_tb.v`) 컴파일을 위해 관련 Python library(`Pyverilog`) 를 import하여 python 파일 내부에서 컴파일을 시도함
+설계한 가산기 모듈(`adder.v`, `adder_tb.v`) 컴파일을 위해 관련 Python library(`Pyverilog`) 를 import하여 python 파일 내부에서 컴파일을 시도함  
 -> 정상적으로 컴파일하지 못하는 문제 발생
 
 💡 **원인 분석:**  
