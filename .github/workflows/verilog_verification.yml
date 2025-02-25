@@ -26,32 +26,71 @@ jobs:
         sudo apt update
         sudo apt install -y iverilog cpp
         pip install pyverilog
+        
+    - name : verilog file 만들기
+      run: |
+        chmod +x verilog/generate_vfile.py  # 실행 권한 부여
+        python verilog/generate_vfile.py  # Python 파일 실행
 
-    - name: input.txt generate
-      run: python generate_input.py
+    - name : adder_n.v 파일 추가 (커밋 및 푸시)
+      run:  |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions@github.com"
+        mv adder_n.v verilog/
+        git add verilog/adder_n.v # github에 추가
+        git commit --allow-empty -m "Update adder_n.v (auto)"
+        git push --force
+
+    - name : verilog tb 만들기
+      run: |
+        chmod +x verilog/generate_tb.py  # 실행 권한 부여
+        python verilog/generate_tb.py  # Python 파일 실행
+
+    - name : adder_tb.v 파일 추가 (커밋 및 푸시)
+      run:  |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions@github.com"
+        mv adder_tb.v verilog/
+        git add verilog/adder_tb.v # github에 추가
+        git commit --allow-empty -m "Update adder_tb.v (auto)" # 변경 사항이 있을 경우 commit
+        git push --force
+
+    - name: input.txt generate 및 edge case 추가
+      run: |
+        python generate_input.py
+      working-directory: ${{ github.workspace }}
 
     - name: input.txt 파일 git에 추가(커밋 및 푸시)
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
-        git add input.txt # input.txt를 github에 추가
-        git commit -m "Update input.txt (auto)" # 변경 사항이 있을 경우 commit
+
+        git status  # 변경 사항 확인
+        git add input.txt --force  # 변경 사항 강제 추가
+        git commit --allow-empty -m "Update input.txt with edge cases (auto)"
         git push --force
         
-    - name: Full Adder Python 실행
-      run: python run_python_adder.py
+    - name: edge_case.py을 통해 edge case들 input.txt 파일에 추가
+      run: |
+        chmod +x edge_case/edge_case.py  # 실행 권한 부여
+        python edge_case/edge_case.py  # Python 파일 실행
 
-    - name: python_output.txt 파일 git에 추가(커밋 및 푸시)
+    - name: input.txt 파일 git에 추가(커밋 및 푸시)
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions@github.com"
-        git add python_output.txt # python_output.txt를 github에 추가
-        git commit -m "Update python_output.txt (auto)" # 변경 사항이 있을 경우 commit
+
+        git status  # 변경 사항 확인
+        git add input.txt --force  # 변경 사항 강제 추가
+        git commit --allow-empty -m "Update input.txt with edge cases (auto)"
         git push --force
-    
 
     - name:  Run Verilog
-      run: iverilog -o adder_sim adder.v adder8.v adder_tb.v  # Verilog 컴파일
+      run: |
+        chmod +x verilog/adder_n.v  # 실행 권한 부여
+        chmod +x verilog/adder.v  # 실행 권한 부여
+        chmod +x verilog/adder_tb.v  # 실행 권한 부여
+        iverilog -o adder_sim verilog/adder.v verilog/adder_n.v verilog/adder_tb.v  # Verilog 컴파일
 
     - name: Run Verilog Simulation
       run: vvp adder_sim  # 시뮬레이션 실행
@@ -70,6 +109,17 @@ jobs:
         git commit -m "Update verilog_output.txt (auto)" # 변경 사항이 있을 경우 commit
         git push --force
 
+    - name: run python adder
+      run: python run_python_adder.py
+
+    - name: python_output.txt 파일 git에 추가(커밋 및 푸시)
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions@github.com"
+        git add python_output.txt # verilog_output.txt를 github에 추가
+        git commit -m "Update python_output.txt (auto)" # 변경 사항이 있을 경우 commit
+        git push --force
+
     - name: 결과 비교
       run: python compare_files.py
 
@@ -82,7 +132,18 @@ jobs:
         git config --global user.email "github-actions@github.com"
         git add comparison_output.csv # 날씨 데이터 저장 csv를 github에 추가
         git add comparison_output.csv # 비교 결과 데이터 csv를 github에 추가
-        git commit -m "Update result.csv (auto)" # 변경 사항이 있을 경우 commit
+        git commit -m "Update comparison_output.csv (auto)" # 변경 사항이 있을 경우 commit
         git push # 변경 사항을 git에 push
+
+    - name: 성공률 도출후 txt 파일로 저장
+      run: python success_per.py
+
+    - name: success_per.txt 파일 git에 추가(커밋 및 푸시)
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions@github.com"
+        git add success_per.txt # verilog_output.txt를 github에 추가
+        git commit -m "Update success_per.txt (auto)" # 변경 사항이 있을 경우 commit
+        git push --force
 
       continue-on-error: true #파일 변경이 없을 경우 오류 무시

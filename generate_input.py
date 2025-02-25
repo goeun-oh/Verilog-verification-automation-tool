@@ -1,7 +1,11 @@
 import random
 import os
 
-bit = 8
+# 파일에서 숫자를 읽어 변수에 저장하는 코드
+with open('number.txt', 'r') as file:
+    number = int(file.read().strip())
+
+bit = number
 NUM_TEST_CLASS = 2 ** bit
 
 def translate_2bit(num):

@@ -4,76 +4,76 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/goeun-oh/Verilog-verification-automation-tool)
 ![GitHub contributors](https://img.shields.io/github/contributors/goeun-oh/Verilog-verification-automation-tool)
 
-## 📖 프로젝트 소개
-이 프로젝트는 **Verilog 연산 결과를 자동으로 검증하는 Python 기반의 도구**입니다.  
-Python에서 Full Adder 연산을 수행한 결과와 Verilog 시뮬레이션 결과를 비교하여 검증하는 자동화 시스템을 구현하였습니다.
+## 📖 소개
+Verilog 기반의 n-bit Full Adder 모듈과 테스트벤치를 자동으로 생성하고 검증하는 Python 기반의 자동화 도구입니다.  
+Python에서 수행한 Full Adder 연산 결과와 Verilog 시뮬레이션 결과를 비교하여 검증하는 자동화된 검증 시스템을 제공합니다.  
+본 프로젝트는 설계자가 보다 효율적으로 Verilog 하드웨어 모듈을 개발하고 검증할 수 있도록 지원하는 것을 목표로 합니다.
+<br>
+
+## 🎯 목적
+디지털 회로 설계에서 높은 비트수(n-bit) 연산을 포함하는 모듈의 검증 과정은 테스트 케이스를 수동으로 작성해야 하는 번거로움이 존재합니다.  
+특히 n-bit 연산의 경우 가능한 입력 조합이 기하급수적으로 증가하여, 완전한 검증을 위해서는 방대한 양의 테스트 케이스가 필요합니다.  
+본 프로젝트는 Verilog 모듈 검증을 자동화하여 이러한 문제를 해결하며, 설계자의 수작업을 최소화하면서도 신뢰도 높은 검증을 수행할 수 있도록 지원합니다.
 <br>
 
 ## 🔧 주요 기능
-✅ **Verilog 자동 검증** - Python을 이용하여 Verilog 시뮬레이션을 자동화  
-✅ **랜덤 입력값 생성** - 다양한 입력 조합을 자동 생성  
-✅ **결과 비교 및 로그 저장** - 예측값과 시뮬레이션 결과를 비교하여 로그로 기록  
-✅ **유닛 테스트 지원** - 다양한 테스트 케이스를 설정하여 검증  
+### ✅ **n-bit Full Adder 설계 자동화**
+Python을 이용하여 Verilog 기반의 n-bit Full Adder 모듈 및 테스트벤치를 자동으로 생성  
+- **[1-bit Adder](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder.md)**
+- **[n-bit Adder](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder_nbit.md)**
+- **[testbench](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/adder_tb.md)**
+- **[모듈/테스트벤치 설계 자동화](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/Automating_n-bit_Full_Adder_Design.md)**
 <br>
 
-
-## 🏗️ 팀원 역할 분담
-### **🔹 1️⃣ Verilog 설계**
-**🛠️ 양지훈**: 
-- Verilog를 기반으로 Full Adder 설계 & 시뮬레이션 (`adder.v`)
-- input.txt 의 data를 input으로 하고, 도출된 output을 `verilog_output.txt`에 기록하는 testbench 작성 ( `adder_tb.v`) 
-- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
-**[가산기 설계 (feature/verilog_adder branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/verilog_adder/README.md)**
+### ✅ **Verilog 시뮬레이션 자동화**
+Linux 환경 및 GitHub Actions를 활용한 Verilog 모듈 자동 검증<br>
 <br>
 
-### **🔹 2️⃣ Python 입력 생성**
-**💻 유승우**: 
-- random input을 생성하여 `input.txt`에 기록하는 Python 프로그램 작성 (`generate_input.py`)
-- Python output과 Verilog ouptut을 비교한 후 일치 여부를 csv 파일 형식으로 기록하는 Python 파일 작성 (`txt_to_csv.py`) <br>
-**[Random Input 생성 txt_to_csv 설명 (feature/python_input_gen branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/python_input_gen/README.md)**
+### ✅ **랜덤 및 엣지 케이스 입력 자동 생성**
+n-bit 연산에서 발생할 수 있는 다양한 입력 조합(랜덤 값, 엣지 케이스)을 자동으로 생성하여 테스트 커버리지 향상  
+- **[Random Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/gen_testcase.md)**
+- **[Edge case 고려 계기](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_testing.md)**
+- **[Edge Testcase 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/edge_case.md)**
 <br>
 
-### **🔹 3️⃣ 결과 검증 & 오류 감지**
-**🔍 오고은**:
-- **프로젝트 총괄**
-- Python 기반 결과 도출 및 Verilog Output과 비교 (`run_python_adder.py`, `compare_files.py`)
-- Git Action을 활용한 자동화 스크립트 작성 (`github/workflows/verilog_verification.yml`) <br>
-**[Python vs Verilog 결과 비교 (feature/result_verification branch)](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/feature/result_verification/README.md)**
+### ✅ **모듈 교차 검증**
+Python에서 연산한 결과와 Verilog 시뮬레이션 결과를 비교하여 정확성을 검증<br>
+- **[교차 검증](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/comparison.md)**
 <br>
 
-### **🔹 4️⃣ 검증 자동화 연구 & 기획**
-**🚀 유진모**:  
-- 프로젝트 기획 및 아이디어 구체화
-- 문서 구조 및 개발 방향성 제안
-- Verilog & Python 기반의 검증 자동화 논문 조사
+### ✅ **CI/CD 기반 지속적 검증 지원**
+GitHub Actions를 활용한 자동 검증 파이프라인 구축<br>
+- **[GitHub Actions](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/yml.md)**
 <br>
 
+## 🚀 차별점
+✔ **완전 자동화된 검증 프로세스**<br>
+테스트 입력 생성부터 시뮬레이션, 결과 검증까지 모든 과정을 자동화하여 설계자의 검증 부담을 최소화<br>
 
-# 📂 파일 구조 및 프로젝트 흐름
-📦 Verilog-verification-automation-tool <br>
- ┣ 📜 `README.md`                  # 전체 프로젝트 설명 파일
+✔ **Python과 Verilog의 교차 검증 시스템**<br>
+Python에서 직접 Full Adder 연산을 수행하고, 이를 Verilog 시뮬레이션 결과와 비교하여 설계 오류를 신속하게 탐지<br>
 
- 1️⃣ 입력 데이터 생성 <br>
- ┣ 📜 `generate_input.py`          # random input을 생성하여 input.txt 에 저장 <br>
- ┣ 📜 `input.txt`                  # Full Adder 테스트 입력값 <br>
+✔ **CI/CD 적용으로 지속적 검증 가능**<br>
+GitHub Actions를 활용한 자동화된 검증 환경을 제공하여 코드 변경 시 즉각적인 테스트 및 검증 수행<br>
 
- 2️⃣ Verilog 코드 <br>
- ┣ 📜 `adder.v`                    # Verilog Full Adder 코드 <br>
- ┣ 📜 `adder_tb.v`                 # Verilog Testbench <br>
- ┣ 📜 `verilog_output.txt`         # Verilog 실행 결과 저장 <br>
-
- 3️⃣ Python 연산 및 결과 저장 <br>
- ┣ 📜 `run_python_adder.py`        # Python에서 Full Adder 실행 및 결과 저장 <br>
- ┣ 📜 `python_output.txt`          # Python 연산 결과 저장 <br>
-
- 4️⃣ 결과 비교 및 검증 <br>
- ┣ 📜 `compare_files.py`           # Python과 Verilog 결과 비교 스크립트 <br>
- ┣ 📜 `txt_to_csv.py`              # compare_files.py의 결과를 csv 형식으로 저장 <br>
- ┣ 📜 `comparision_output.csv`     # 저장된 csv 파일 <br>
- ┣ 📂 .github/workflows            # GitHub Actions 워크플로우 파일 저장소 <br>
- ┗ ┗ 📜 `verilog_verification.yml` # GitHub Actions 자동화 스크립트 <br>
- 
+✔ **확장성 높은 구조**<br>
+n-bit Full Adder뿐만 아니라, 향후 다양한 디지털 회로 모듈 검증으로 확장 가능<br>
 <br>
+<br>
+## 📂 파일 구조 및 실행흐름
+- **[파일 구조](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/file_structure.md)**
+- **[실행 흐름](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/flow.md)**
+<br>
+  
+## 🚀 트러블슈팅
+**[1️⃣ n-bit 가산기 모듈 자동 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/Nbit_Adder_Debugging.md)** <br>
+**[2️⃣ verilog 컴파일 문제](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/pyverilog_limitation.md)**  
+**[3️⃣ 검증 신뢰도 문제](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/RandomTesting_limitation.md)** <br>
+
+## 🏗️ 팀원 소개 및 역할
+**[팀원 소개](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/division_role.md)**
+
+
 <br>
 
 
