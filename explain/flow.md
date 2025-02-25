@@ -1,7 +1,7 @@
 # 🚀 Verilog Simulation & Verification Process
 
 ## 📌 개요
-이 문서는 **Verilog 파일 생성부터 검증 및 결과 비교까지의 전체 프로세스**를 설명합니다. 
+이 문서는 **Verilog 파일 생성부터 검증 및 결과 비교까지의 전체 프로세스**를 설명합니다.<br>
 해당 과정은 자동화되어 있으며, GitHub Actions 또는 로컬 환경에서 실행 가능합니다.
 
 ## 🔄 실행 단계
