@@ -7,7 +7,7 @@ a,	b,	cin,	추출시간,	Python_sum,	Python_cout,	Verilog_sum,	Verilog_cout,	일
 ## 🚀 주요 기능
 
 ### ✅ 1. 파일 읽기 
-이 스크립트는 **Python에서 txt파일을 읽기**하고, 결과를 `csv`에 저장합니다.  
+이 스크립트는 **Python에서 txt파일을 읽기**하고, 결과를 `csv`에 저장한다.  
 
 📌 **기능 상세**
 - python_file에서 a, b, cin, Python_sum, Python_cout, Verilog_sum, Verilog_cout을 읽어온다.
@@ -22,8 +22,8 @@ a,	b,	cin,	추출시간,	Python_sum,	Python_cout,	Verilog_sum,	Verilog_cout,	일
 📌 **기능 상세**
 - import datetime과 from datetime import timezon의 차이점
     
-    1. import datetime은 모듈 전체를 가져와서 timezone 객체는 datetime 모율의 하위 모듈인 datetime.timezon으로 접근하게 됨
-    2. from datetime import timezone은 datetime 모듈에서 timezone 객체만을 직접 가져와서 timezone으로 바로 사용 가능
+    1. import datetime은 모듈 전체를 가져와서 timezone 객체는 datetime 모율의 하위 모듈인 datetime.timezon으로 접근한다.
+    2. from datetime import timezone은 datetime 모듈에서 timezone 객체만을 직접 가져와서 timezone으로 바로 사용 가능하다.
  
 - utc kst 시간으로 변환
     
@@ -41,7 +41,7 @@ a,	b,	cin,	추출시간,	Python_sum,	Python_cout,	Verilog_sum,	Verilog_cout,	일
 py_sum과 verilog_sum 그리고 py_cout과 verilog_cout을 비교하여 일치 여부를 확인한다.
 
 📌 **기능 상세**
-- py_sum == verilog_sum and py_cout == verilog_cout을 확인 하여 일치 하면 일치여부 항목에 O 불일치 하면 X를 출력한다.
+- py_sum == verilog_sum and py_cout == verilog_cout을 확인 하여 일치여부 항목에 일치 하면 O, 불일치 하면 X를 출력한다.
 
 ### ✅ 4. csv 기록
 헤더를 만들고 일정 시간마다 추가로 갱신한다.
@@ -49,12 +49,12 @@ py_sum과 verilog_sum 그리고 py_cout과 verilog_cout을 비교하여 일치 �
 📌 **기능 상세**
   - with open(output_csv, "w", newline="") as csvfile:
     
-    1. 덮어쓰는 방식으로 csv 파일이 생성되므로 csv 파일에 추가되는 방식으로 변경
+    1. 덮어쓰는 방식으로 csv 파일이 생성되므로 csv 파일에 추가되는 방식으로 변경하낟.
        
     2. csv 파일 작성 혹은 존재 확인
        file_exists = os.path.isfile(output_csv)
 
-    3. w를 a로 바꿔 데이터가 추가되는 방식으로 바꿈
+    3. w를 a로 바꿔 데이터가 추가되는 방식으로 바꾼다.
        with open(output_csv, "a", newline="") as csvfile: 
 
     4. 파일이 없으면 헤더 작성한다.
