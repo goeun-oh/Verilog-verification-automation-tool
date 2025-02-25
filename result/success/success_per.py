@@ -1,5 +1,5 @@
 import csv
-
+import os
 # CSV 파일 경로
 script_dir=os.path.dirname(os.path.abspath(__file__))
 csv_file_path = os.path.join(script_dir,"..",'comparison_output.csv')
