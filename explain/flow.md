@@ -21,7 +21,7 @@
 - **(3) `verilog_output.txt` 생성** (Verilog 시뮬레이션 결과 저장)
 
 ### 4️⃣ **Python Adder 실행**
-- **(1) `python_adder.py` 실행**
+- **(1) `run_python_adder.py` 실행**
 - **(2) `python_output.txt` 생성** (Python으로 Full Adder 실행 결과 저장)
 
 ### 5️⃣ **결과 비교 및 CSV 저장**
