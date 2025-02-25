@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 # 파일 경로
 script_dir = os.path.dirname(os.path.abspath(__file__))
 python_file = os.path.join(script_dir, "python_output.txt")
-verilog_file = "verilog_output.txt"
+verilog_file = os.path.join(script_dir,"verilog_output.txt")
 output_csv = "comparison_output.csv"
 
 # 파일 읽기 함수
