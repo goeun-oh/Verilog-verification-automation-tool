@@ -4,7 +4,8 @@ from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 # 파일 경로
-python_file = "python_output.txt"
+script_dir = os.path.dirname(os.path.abspath(__file__))
+python_file = os.path.join(script_dir, "python_output.txt")
 verilog_file = "verilog_output.txt"
 output_csv = "comparison_output.csv"
 
