@@ -64,7 +64,6 @@ n-bit Full Adder뿐만 아니라, 향후 다양한 디지털 회로 모듈 검�
 - **[파일 구조](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/file_structure.md)**
 - **[실행 흐름](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/flow.md)**
 <br>
-<br>
   
 ## 🚀 트러블슈팅
 **[1️⃣ n-bit 가산기 모듈 자동 생성](https://github.com/goeun-oh/Verilog-verification-automation-tool/blob/hotfix_v01/explain/trouble_shooting/Nbit_Adder_Debugging.md)** <br>
