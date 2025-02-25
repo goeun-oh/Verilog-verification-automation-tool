@@ -17,7 +17,7 @@
 
 ### 3️⃣ **Verilog 시뮬레이션 실행**
 - **(1) `adder_n.v` 실행**
-- **(2) `adder_tb.v` 실행 (`vvp`)**
+- **(2) `adder_tb.v` 실행**
 - **(3) `verilog_output.txt` 생성** (Verilog 시뮬레이션 결과 저장)
 
 ### 4️⃣ **Python Adder 실행**
