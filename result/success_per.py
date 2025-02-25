@@ -2,7 +2,7 @@ import csv
 import os
 # CSV 파일 경로
 script_dir=os.path.dirname(os.path.abspath(__file__))
-csv_file_path = os.path.join.(script_dir,'comparison_output.csv')
+csv_file_path = os.path.join(script_dir,'comparison_output.csv')
 
 # 성공 횟수와 전체 횟수를 저장할 변수 초기화
 success_count = 0
